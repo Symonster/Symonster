@@ -1,166 +1,183 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Symon Portfolio</title>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symon's Portfolio</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('your-image.jpg.jpeg') no-repeat center top;
+      font-family: Arial, sans-serif;
+      background: url('your-image.jpg.jpeg') no-repeat center center;
       background-size: cover;
       color: black;
     }header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
-  animation: colorChange 2s infinite;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .logo span {
-  animation: bounce 1s infinite alternate;
+  display: inline-block;
+  animation: bounce 2s infinite;
 }
 
-.logo img {
-  height: 30px;
-}
+.logo span:nth-child(1) { color: black; }
+.logo span:nth-child(2) { color: blue; }
+.logo span:nth-child(3) { color: black; }
+.logo span:nth-child(4) { color: blue; }
+.logo span:nth-child(5) { color: black; }
 
-@keyframes colorChange {
-  0% { color: #3498db; }
-  50% { color: #000000; }
-  100% { color: #3498db; }
-}
-
-@keyframes bounce {
-  from { transform: translateY(0); }
-  to { transform: translateY(-5px); }
+.live-sticker {
+  width: 30px;
+  margin-left: 10px;
 }
 
 nav a {
-  color: black;
+  color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin: 0 15px;
   font-weight: bold;
-  animation: shake 1s infinite alternate;
-  background-color: black;
-  padding: 8px 12px;
-  border-radius: 6px;
+  position: relative;
 }
 
-@keyframes shake {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(5px); }
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
-.intro {
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.main {
   text-align: center;
-  padding: 100px 30px 40px;
+  margin-top: 100px;
 }
 
-.intro h1 {
-  font-size: 40px;
-  color: black;
+.main h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
 
 .projects {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 40px;
-  gap: 10px;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.project-box {
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 20px;
+.project {
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 10px;
+  width: 45%;
+  margin: 10px;
+  padding: 20px;
   text-align: center;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
-.project-box:hover {
+.project:hover {
   transform: scale(1.05);
 }
 
-.project-box img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
+.project img {
+  width: 50px;
+  height: 50px;
 }
 
 .contact {
   text-align: center;
-  padding: 40px 0;
+  padding: 20px;
+  margin-top: 50px;
 }
 
-.contact-icons a {
-  margin: 0 10px;
-}
-
-.contact-icons img {
+.social-icons img {
   width: 40px;
-  height: 40px;
+  margin: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
 }
 
   </style>
-</head><body>
+</head>
+<body>
   <header>
     <div class="logo">
       <span>S</span><span>y</span><span>m</span><span>o</span><span>n</span>
-      <img src="eren-titan.jpg" alt="Live Icon">
+      <img src="eren-titan.jpg" alt="Live" class="live-sticker" />
     </div>
     <nav>
-      <a href="#contact">Hire Me</a>
+      <a href="#">Hire Me</a>
     </nav>
-  </header>  <div class="intro">
+  </header>  <div class="main">
     <h1>Hi, it's Symon</h1>
   </div>  <div class="projects">
-    <div class="column">
-      <a href="projects/html/index.html" class="project-box">
-        <img src="https://img.icons8.com/color/48/html-5.png" alt="HTML">
-        <div>HTML Project</div>
-      </a>
-      <a href="projects/css/index.html" class="project-box">
-        <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
-        <div>CSS Project</div>
-      </a>
-      <a href="projects/js/index.html" class="project-box">
-        <img src="https://img.icons8.com/color/48/javascript.png" alt="JavaScript">
-        <div>JavaScript Game</div>
+    <div class="project">
+      <a href="projects/html/index.html">
+        <img src="html-icon.png" alt="HTML">
+        <h3>HTML Project</h3>
       </a>
     </div>
-    <div class="column">
-      <a href="projects/python/index.html" class="project-box">
-        <img src="https://img.icons8.com/color/48/python.png" alt="Python">
-        <div>Python Mini App</div>
-      </a>
-      <a href="projects/react/index.html" class="project-box">
-        <img src="https://img.icons8.com/color/48/react-native.png" alt="React">
-        <div>React Portfolio</div>
-      </a>
-      <a href="projects/php/index.html" class="project-box">
-        <img src="https://img.icons8.com/officel/40/php-logo.png" alt="PHP">
-        <div>PHP Login System</div>
+    <div class="project">
+      <a href="projects/css/index.html">
+        <img src="css-icon.png" alt="CSS">
+        <h3>CSS Project</h3>
       </a>
     </div>
-  </div>  <div class="contact" id="contact">
+    <div class="project">
+      <a href="projects/js/index.html">
+        <img src="js-icon.png" alt="JavaScript">
+        <h3>JavaScript Game</h3>
+      </a>
+    </div>
+    <div class="project">
+      <a href="projects/python/index.html">
+        <img src="python-icon.png" alt="Python">
+        <h3>Python Mini App</h3>
+      </a>
+    </div>
+    <div class="project">
+      <a href="projects/react/index.html">
+        <img src="react-icon.png" alt="React">
+        <h3>React Portfolio</h3>
+      </a>
+    </div>
+    <div class="project">
+      <a href="projects/php/index.html">
+        <img src="php-icon.png" alt="PHP">
+        <h3>PHP Login System</h3>
+      </a>
+    </div>
+  </div>  <div class="contact">
     <h2>Feel free to knock me</h2>
-    <div class="contact-icons">
+    <div class="social-icons">
       <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
         <img src="facebook.png" alt="Facebook">
       </a>
@@ -171,5 +188,8 @@ nav a {
         <img src="whatsapp.png" alt="WhatsApp">
       </a>
     </div>
-  </div>
-</body></html>
+  </div>  <footer>
+    &copy; 2025 Symon | All rights reserved
+  </footer>
+</body>
+</html>
