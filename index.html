@@ -1,178 +1,156 @@
-<!DOCTYPE html><html lang="en">
-<head>
+  <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Symon | Portfolio</title>
+  <title>Symon Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yH6E72F5yQkSrFvGZq5iA3Vr9g3GiO0Jw4b2RaZ0rVHz4jY5rxHJ57XToj5MP1TbT1Gz1Fz9xyX7oP8Dj3/1PQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('eren-titan.jpg') no-repeat center top;
-      background-size: cover;
-      color: black;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      animation: waveColors 2s infinite alternate;
-      display: flex;
-      align-items: center;
-    }
-    .logo span {
-      display: inline-block;
-      animation: bounce 1s infinite alternate;
-    }
-    .live-tag {
-      margin-left: 10px;
-      width: 30px;
-      height: 30px;
-    }
-    @keyframes bounce {
-      from {
-        transform: translateY(0px);
-      }
-      to {
-        transform: translateY(-5px);
-      }
-    }
-    @keyframes waveColors {
-      0% {
-        color: #0ff;
-      }
-      50% {
-        color: #0f0;
-      }
-      100% {
-        color: #00f;
-      }
-    }
-    nav a {
-      margin-left: 20px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-      animation: pulse 1.5s infinite;
-    }
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    main {
-      padding: 60px 30px;
-    }
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-    .project-section {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-top: 40px;
-    }
-    .project {
-      width: 45%;
-      background-color: rgba(255, 255, 255, 0.7);
-      border-radius: 10px;
-      margin: 10px;
-      padding: 20px;
-      transition: transform 0.3s;
-      display: flex;
-      align-items: center;
-    }
-    .project:hover {
-      transform: scale(1.03);
-    }
-    .project img {
-      width: 60px;
-      height: 60px;
-      margin-right: 20px;
-    }
-    .project a {
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
-    footer {
-      margin-top: 50px;
-      text-align: center;
-      padding: 30px;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    .social-icons img {
-      width: 30px;
-      margin: 0 10px;
-      vertical-align: middle;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo">Symon <img class="live-tag" src="eren-titan.jpg" alt="live"></div>
-    <nav>
-      <a href="#contact">Hire Me</a>
-    </nav>
-  </header>  <main>
-    <h1>Hi, it's Symon</h1>
-    <div class="project-section">
-      <div class="project">
-        <img src="html-icon.png" alt="HTML">
-        <a href="projects/html-project/index.html" target="_blank">HTML Project</a>
-      </div>
-      <div class="project">
-        <img src="css-icon.png" alt="CSS">
-        <a href="projects/css-project/index.html" target="_blank">CSS Design</a>
-      </div>
-      <div class="project">
-        <img src="js-icon.png" alt="JS">
-        <a href="projects/js-game/index.html" target="_blank">JavaScript Game</a>
-      </div>
-      <div class="project">
-        <img src="python-icon.png" alt="Python">
-        <a href="projects/python-app/index.html" target="_blank">Python Mini App</a>
-      </div>
-      <div class="project">
-        <img src="react-icon.png" alt="React">
-        <a href="projects/react-portfolio/index.html" target="_blank">React Portfolio</a>
-      </div>
-      <div class="project">
-        <img src="php-icon.png" alt="PHP">
-        <a href="projects/php-login/index.html" target="_blank">PHP Login System</a>
-      </div>
-    </div>
-  </main>  <footer id="contact">
-    <p style="font-size: 20px; font-weight: bold;">Feel free to knock me:</p>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
-        <img src="facebook.png" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com/symonster__/" target="_blank">
-        <img src="instagram.png" alt="Instagram">
-      </a>
-      <a href="https://wa.me/96597707393" target="_blank">
-        <img src="whatsapp.png" alt="WhatsApp">
-      </a>
-    </div>
-  </footer>
-</body>
-</html>
+    }body {
+  background: url('eren-titan.jpg') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  color: black;
+}
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% { color: black; }
+  50% { color: blue; }
+  100% { color: black; }
+}
+
+.live-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.live-tag img {
+  width: 30px;
+  height: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.intro {
+  text-align: center;
+  padding: 100px 20px 40px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+
+.project {
+  width: 45%;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.project img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.project a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact-icons a {
+  color: black;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+  </style>
+</head><body>
+  <header>
+    <div class="logo">Symon</div>
+    <div class="live-tag">
+      <img src="eren-titan.jpg" alt="live logo">
+      <span style="color:red">LIVE</span>
+    </div>
+    <nav>
+      <a href="#">Hire Me</a>
+    </nav>
+  </header>  <div class="intro">
+    Hi, it's Symon
+  </div>  <div class="projects">
+    <div class="project">
+      <img src="icons/html.png" alt="HTML">
+      <a href="projects/html/index.html" target="_blank">HTML Project</a>
+    </div>
+    <div class="project">
+      <img src="icons/css.png" alt="CSS">
+      <a href="projects/css/index.html" target="_blank">CSS Project</a>
+    </div>
+    <div class="project">
+      <img src="icons/js.png" alt="JavaScript">
+      <a href="projects/js/index.html" target="_blank">JavaScript Game</a>
+    </div>
+    <div class="project">
+      <img src="icons/python.png" alt="Python">
+      <a href="projects/python/index.html" target="_blank">Python Mini App</a>
+    </div>
+    <div class="project">
+      <img src="icons/react.png" alt="React">
+      <a href="projects/react/index.html" target="_blank">React Portfolio</a>
+    </div>
+    <div class="project">
+      <img src="icons/php.png" alt="PHP">
+      <a href="projects/php/index.html" target="_blank">PHP Login System</a>
+    </div>
+  </div>  <div class="contact">
+    <p>Feel free to knock me</p>
+    <div class="contact-icons">
+      <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/symonster__/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/96597707393" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</body></html>    
