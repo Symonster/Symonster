@@ -1,151 +1,77 @@
-<!DOCTYPE html><html lang="en">
+    <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Symon's Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: url('your-image.jpg.jpeg') no-repeat center 30% fixed;
-      background-size: cover;
-      color: white;
-      font-family: sans-serif;
+  <script src="https://cdn.tailwindcss.com"></script>  <style>
+    .text-animation .letter {
+      display: inline-block;
+      animation: colorChange 2s infinite, float 3s ease-in-out infinite;
     }
-    .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      padding-bottom: 2rem;
-    }
-    .card {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: white;
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-    }
-    .card i {
-      font-size: 2rem;
-      margin-right: 1rem;
-    }
-    .hire-button {
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-5px);
-      }
-    }
-    .live-tag {
-      margin-left: 0.5rem;
-      display: flex;
-      align-items: center;
-    }
-    .live-tag img {
-      width: 30px;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-  <div class="overlay">
-    <!-- Navbar -->
-    <nav class="p-4 flex justify-between items-center">
-      <div class="flex items-center text-2xl font-bold">
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-black to-blue-500">Symon</span>
-        <span class="live-tag">
-          <img src="https://i.ibb.co/fxPJn0q/live-anime.gif" alt="Live">
-        </span>
-      </div>
-      <a href="#contact" class="text-white bg-blue-600 px-4 py-2 rounded hire-button hover:bg-blue-800 transition">Hire Me</a>
-    </nav><!-- Header -->
-<div class="text-center mt-10">
-  <h1 class="text-4xl font-bold mb-4">Symon</h1>
-  <p>Email: su2403703@gmail.com</p>
-  <p>Phone: +965 97707393</p>
-  <p>Address: Hawally, Kuwait</p>
-</div>
 
-<!-- Projects Section -->
-<div class="flex flex-wrap justify-between max-w-6xl mx-auto mt-10 px-6">
-  <!-- Left Projects -->
-  <div class="w-full md:w-5/12 flex flex-col items-start">
-    <div class="card w-full">
-      <i class="fas fa-list-check"></i>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">To-Do List App</h2>
-        <p>Simple task manager to add, mark and delete tasks.</p>
-      </div>
-    </div>
-    <div class="card w-full">
-      <i class="fas fa-sun"></i>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Weather App</h2>
-        <p>Real-time weather info using API.</p>
-      </div>
-    </div>
-    <div class="card w-full">
-      <i class="fas fa-coins"></i>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Currency Converter</h2>
-        <p>Convert value between currencies.</p>
-      </div>
-    </div>
-  </div>
-  <!-- Right Projects -->
-  <div class="w-full md:w-5/12 flex flex-col items-end">
-    <div class="card w-full">
-      <i class="fas fa-calculator"></i>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Calculator</h2>
-        <p>Basic calculator for math operations.</p>
-      </div>
-    </div>
-    <div class="card w-full">
-      <i class="fas fa-note-sticky"></i>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Notes App</h2>
-        <p>Write and store personal notes.</p>
-      </div>
-    </div>
-    <div class="card w-full">
-      <i class="fas fa-laptop-code"></i>
-      <div>
-        <h2 class="text-xl font-semibold mb-1">Portfolio Website</h2>
-        <p>This portfolio with projects and contact.</p>
-      </div>
-    </div>
-  </div>
-</div>
+    @keyframes colorChange {
+      0% { color: #000000; }
+      25% { color: #1E90FF; }
+      50% { color: #000000; }
+      75% { color: #1E90FF; }
+      100% { color: #000000; }
+    }
 
-<!-- Footer / Contact -->
-<footer id="contact" class="text-center py-8">
-  <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
-  <div class="flex justify-center space-x-8 text-white text-3xl">
-    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank" class="hover:text-blue-500">
-      <i class="fab fa-facebook"></i>
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+  </style></head>
+<body class="bg-black text-white min-h-screen">
+  <!-- Header Section -->
+  <header class="flex items-center justify-between p-4">
+    <div class="flex items-center text-2xl font-bold">
+      <span class="text-animation">
+        <span class="letter">S</span>
+        <span class="letter">y</span>
+        <span class="letter">m</span>
+        <span class="letter">o</span>
+        <span class="letter">n</span>
+      </span>
+      <img src="eren-titan.jpg" alt="Eren Titan" class="w-8 h-8 ml-2 animate-bounce">
+    </div>
+    <nav>
+      <a href="#contact" class="text-blue-400 hover:underline animate-pulse">Hire Me</a>
+    </nav>
+  </header>  <!-- Main Content Placeholder -->  <main class="p-4">
+    <section>
+      <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
+      <p class="text-lg">I'm Symon, a passionate coder and designer.</p>
+    </section><!-- Projects Section -->
+<section class="mt-10">
+  <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 1</div>
+    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 2</div>
+    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 3</div>
+    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 4</div>
+    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 5</div>
+    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 6</div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="mt-10">
+  <h2 class="text-3xl font-semibold mb-4">Feel free to knock me</h2>
+  <div class="flex gap-4">
+    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-8 h-8 hover:scale-110 transition-transform">
     </a>
-    <a href="https://www.instagram.com/symonster__/" target="_blank" class="hover:text-pink-500">
-      <i class="fab fa-instagram"></i>
+    <a href="https://www.instagram.com/symonster__/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-8 h-8 hover:scale-110 transition-transform">
     </a>
-    <a href="https://wa.me/96597707393" target="_blank" class="hover:text-green-400">
-      <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/96597707393" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-8 h-8 hover:scale-110 transition-transform">
     </a>
   </div>
-  <p class="mt-4">Feel free to contact me anytime!</p>
-</footer>
+</section>
 
-  </div>
+  </main>
 </body>
 </html>
-
- 
-      
