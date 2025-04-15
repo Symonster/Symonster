@@ -1,156 +1,144 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html><html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Symon Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yH6E72F5yQkSrFvGZq5iA3Vr9g3GiO0Jw4b2RaZ0rVHz4jY5rxHJ57XToj5MP1TbT1Gz1Fz9xyX7oP8Dj3/1PQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }body {
-  background: url('eren-titan.jpg') no-repeat center top;
-  background-size: cover;
-  background-attachment: fixed;
-  color: black;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  animation: colorChange 5s infinite alternate;
-}
-
-@keyframes colorChange {
-  0% { color: black; }
-  50% { color: blue; }
-  100% { color: black; }
-}
-
-.live-tag {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.live-tag img {
-  width: 30px;
-  height: 30px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 18px;
-  animation: float 2s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-.intro {
-  text-align: center;
-  padding: 100px 20px 40px;
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.projects {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 40px;
-}
-
-.project {
-  width: 45%;
-  margin: 20px 0;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-.project img {
-  width: 50px;
-  margin-bottom: 10px;
-}
-
-.project a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.contact {
-  text-align: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
-}
-
-.contact-icons a {
-  color: black;
-  font-size: 24px;
-  margin: 0 10px;
-}
-
+      background: url('your-image.jpg.jpeg') no-repeat center center;
+      background-size: cover;
+      color: black;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      animation: colorChange 3s infinite alternate;
+    }
+    .logo span {
+      margin-left: 10px;
+      animation: pulse 1s infinite;
+    }
+    @keyframes colorChange {
+      0% { color: black; }
+      100% { color: blue; }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    nav a {
+      color: black;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+      animation: float 2s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+    .projects {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 20px;
+      flex-wrap: wrap;
+    }
+    .project {
+      width: 30%;
+      background: rgba(255, 255, 255, 0.8);
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .project img {
+      width: 60px;
+      height: 60px;
+    }
+    .contact {
+      text-align: center;
+      padding: 30px;
+    }
+    .social-icons img {
+      width: 30px;
+      margin: 10px;
+    }
   </style>
-</head><body>
+</head>
+<body>
   <header>
-    <div class="logo">Symon</div>
-    <div class="live-tag">
-      <img src="eren-titan.jpg" alt="live logo">
-      <span style="color:red">LIVE</span>
-    </div>
+    <div class="logo">Symon <span><img src="eren-titan.jpg" width="30" height="30" /></span></div>
     <nav>
       <a href="#">Hire Me</a>
     </nav>
-  </header>  <div class="intro">
-    Hi, it's Symon
-  </div>  <div class="projects">
-    <div class="project">
-      <img src="icons/html.png" alt="HTML">
-      <a href="projects/html/index.html" target="_blank">HTML Project</a>
-    </div>
-    <div class="project">
-      <img src="icons/css.png" alt="CSS">
-      <a href="projects/css/index.html" target="_blank">CSS Project</a>
-    </div>
-    <div class="project">
-      <img src="icons/js.png" alt="JavaScript">
-      <a href="projects/js/index.html" target="_blank">JavaScript Game</a>
-    </div>
-    <div class="project">
-      <img src="icons/python.png" alt="Python">
-      <a href="projects/python/index.html" target="_blank">Python Mini App</a>
-    </div>
-    <div class="project">
-      <img src="icons/react.png" alt="React">
-      <a href="projects/react/index.html" target="_blank">React Portfolio</a>
-    </div>
-    <div class="project">
-      <img src="icons/php.png" alt="PHP">
-      <a href="projects/php/index.html" target="_blank">PHP Login System</a>
-    </div>
-  </div>  <div class="contact">
-    <p>Feel free to knock me</p>
-    <div class="contact-icons">
-      <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/symonster__/" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://wa.me/96597707393" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
+  </header>  <main>
+    <section class="intro" style="padding: 40px; text-align:center;">
+      <h1 style="font-size: 32px;">Hi, it's Symon</h1>
+    </section><section class="projects">
+  <div class="project">
+    <a href="html-projects/animated-form.html" target="_blank">
+      <img src="html-icon.png" alt="HTML Project" />
+      <h3>Animated HTML Form</h3>
+    </a>
   </div>
-</body></html>
+  <div class="project">
+    <a href="css-projects/glass-effect-card.html" target="_blank">
+      <img src="css-icon.png" alt="CSS Project" />
+      <h3>Glass Effect Card</h3>
+    </a>
+  </div>
+  <div class="project">
+    <a href="js-projects/simple-game.html" target="_blank">
+      <img src="js-icon.png" alt="JavaScript Game" />
+      <h3>Simple JavaScript Game</h3>
+    </a>
+  </div>
+  <div class="project">
+    <a href="python-apps/mini-tool.html" target="_blank">
+      <img src="python-icon.png" alt="Python App" />
+      <h3>Python Mini Tool</h3>
+    </a>
+  </div>
+  <div class="project">
+    <a href="react-apps/portfolio.html" target="_blank">
+      <img src="react-icon.png" alt="React Portfolio" />
+      <h3>React Portfolio</h3>
+    </a>
+  </div>
+  <div class="project">
+    <a href="php-apps/login-system.html" target="_blank">
+      <img src="php-icon.png" alt="PHP Login" />
+      <h3>PHP Login System</h3>
+    </a>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Feel free to knock me</h2>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
+    <a href="https://www.instagram.com/symonster__/" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+    <a href="https://wa.me/96597707393" target="_blank"><img src="whatsapp.png" alt="WhatsApp" /></a>
+  </div>
+</section>
+
+  </main>
+</body>
+</html>
