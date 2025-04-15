@@ -1,9 +1,16 @@
-    <!DOCTYPE html><html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Symon's Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>  <style>
+    body {
+      background-image: url('your-image.jpg.jpeg');
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+
     .text-animation .letter {
       display: inline-block;
       animation: colorChange 2s infinite, float 3s ease-in-out infinite;
@@ -23,9 +30,9 @@
       100% { transform: translateY(0); }
     }
   </style></head>
-<body class="bg-black text-white min-h-screen">
+<body class="text-white min-h-screen backdrop-blur-md">
   <!-- Header Section -->
-  <header class="flex items-center justify-between p-4">
+  <header class="flex items-center justify-between p-4 bg-black bg-opacity-60">
     <div class="flex items-center text-2xl font-bold">
       <span class="text-animation">
         <span class="letter">S</span>
@@ -39,20 +46,20 @@
     <nav>
       <a href="#contact" class="text-blue-400 hover:underline animate-pulse">Hire Me</a>
     </nav>
-  </header>  <!-- Main Content Placeholder -->  <main class="p-4">
+  </header>  <!-- Main Content -->  <main class="p-4">
     <section>
       <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
       <p class="text-lg">I'm Symon, a passionate coder and designer.</p>
     </section><!-- Projects Section -->
 <section class="mt-10">
   <h2 class="text-3xl font-semibold mb-4">Projects</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 1</div>
-    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 2</div>
-    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 3</div>
-    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 4</div>
-    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 5</div>
-    <div class="bg-white bg-opacity-10 backdrop-blur rounded-xl p-4">Project 6</div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-center text-black">Project 1</div>
+    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-center text-black">Project 2</div>
+    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-center text-black">Project 3</div>
+    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-center text-black">Project 4</div>
+    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-center text-black">Project 5</div>
+    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-center text-black">Project 6</div>
   </div>
 </section>
 
@@ -74,4 +81,4 @@
 
   </main>
 </body>
-</html>
+</html>          
