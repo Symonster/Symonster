@@ -1,4 +1,3 @@
-
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -46,18 +45,13 @@
       }
     }
     .live-tag {
-      background: red;
-      color: white;
-      font-size: 0.75rem;
-      padding: 0.2rem 0.4rem;
-      border-radius: 0.25rem;
       margin-left: 0.5rem;
-      animation: pulse 1.5s infinite;
+      display: flex;
+      align-items: center;
     }
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.4; }
-      100% { opacity: 1; }
+    .live-tag img {
+      width: 30px;
+      height: auto;
     }
   </style>
 </head>
@@ -65,13 +59,11 @@
   <div class="overlay">
     <!-- Navbar -->
     <nav class="p-4 flex justify-between items-center">
-      <div class="flex items-center space-x-1 text-2xl font-bold">
-        <span class="text-red-500">S</span>
-        <span class="text-orange-400">Y</span>
-        <span class="text-yellow-400">M</span>
-        <span class="text-green-400">O</span>
-        <span class="text-blue-400">N</span>
-        <span class="live-tag">LIVE</span>
+      <div class="flex items-center text-2xl font-bold">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-black to-blue-500">Symon</span>
+        <span class="live-tag">
+          <img src="https://i.ibb.co/fxPJn0q/live-anime.gif" alt="Live">
+        </span>
       </div>
       <a href="#contact" class="text-white bg-blue-600 px-4 py-2 rounded hire-button hover:bg-blue-800 transition">Hire Me</a>
     </nav><!-- Header -->
@@ -154,3 +146,6 @@
   </div>
 </body>
 </html>
+
+ 
+      
