@@ -2,181 +2,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Symon's Portfolio</title>
+  <title>Symon | Portfolio</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('your-image.jpg.jpeg') no-repeat center center;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('eren-titan.jpg') no-repeat center top;
       background-size: cover;
       color: black;
-    }header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px 20px;
-}
-
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-.logo span {
-  display: inline-block;
-  animation: bounce 2s infinite;
-}
-
-.logo span:nth-child(1) { color: black; }
-.logo span:nth-child(2) { color: blue; }
-.logo span:nth-child(3) { color: black; }
-.logo span:nth-child(4) { color: blue; }
-.logo span:nth-child(5) { color: black; }
-
-.live-sticker {
-  width: 30px;
-  margin-left: 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 3px;
-  background: white;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-nav a:hover::after {
-  transform: scaleX(1);
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-.main {
-  text-align: center;
-  margin-top: 100px;
-}
-
-.main h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.projects {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 40px;
-}
-
-.project {
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  width: 45%;
-  margin: 10px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.project:hover {
-  transform: scale(1.05);
-}
-
-.project img {
-  width: 50px;
-  height: 50px;
-}
-
-.contact {
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
-}
-
-.social-icons img {
-  width: 40px;
-  margin: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-}
-
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      animation: waveColors 2s infinite alternate;
+      display: flex;
+      align-items: center;
+    }
+    .logo span {
+      display: inline-block;
+      animation: bounce 1s infinite alternate;
+    }
+    .live-tag {
+      margin-left: 10px;
+      width: 30px;
+      height: 30px;
+    }
+    @keyframes bounce {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-5px);
+      }
+    }
+    @keyframes waveColors {
+      0% {
+        color: #0ff;
+      }
+      50% {
+        color: #0f0;
+      }
+      100% {
+        color: #00f;
+      }
+    }
+    nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    main {
+      padding: 60px 30px;
+    }
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .project-section {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .project {
+      width: 45%;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 10px;
+      margin: 10px;
+      padding: 20px;
+      transition: transform 0.3s;
+      display: flex;
+      align-items: center;
+    }
+    .project:hover {
+      transform: scale(1.03);
+    }
+    .project img {
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+    }
+    .project a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .social-icons img {
+      width: 30px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <span>S</span><span>y</span><span>m</span><span>o</span><span>n</span>
-      <img src="eren-titan.jpg" alt="Live" class="live-sticker" />
-    </div>
+    <div class="logo">Symon <img class="live-tag" src="eren-titan.jpg" alt="live"></div>
     <nav>
-      <a href="#">Hire Me</a>
+      <a href="#contact">Hire Me</a>
     </nav>
-  </header>  <div class="main">
+  </header>  <main>
     <h1>Hi, it's Symon</h1>
-  </div>  <div class="projects">
-    <div class="project">
-      <a href="projects/html/index.html">
+    <div class="project-section">
+      <div class="project">
         <img src="html-icon.png" alt="HTML">
-        <h3>HTML Project</h3>
-      </a>
-    </div>
-    <div class="project">
-      <a href="projects/css/index.html">
+        <a href="projects/html-project/index.html" target="_blank">HTML Project</a>
+      </div>
+      <div class="project">
         <img src="css-icon.png" alt="CSS">
-        <h3>CSS Project</h3>
-      </a>
-    </div>
-    <div class="project">
-      <a href="projects/js/index.html">
-        <img src="js-icon.png" alt="JavaScript">
-        <h3>JavaScript Game</h3>
-      </a>
-    </div>
-    <div class="project">
-      <a href="projects/python/index.html">
+        <a href="projects/css-project/index.html" target="_blank">CSS Design</a>
+      </div>
+      <div class="project">
+        <img src="js-icon.png" alt="JS">
+        <a href="projects/js-game/index.html" target="_blank">JavaScript Game</a>
+      </div>
+      <div class="project">
         <img src="python-icon.png" alt="Python">
-        <h3>Python Mini App</h3>
-      </a>
-    </div>
-    <div class="project">
-      <a href="projects/react/index.html">
+        <a href="projects/python-app/index.html" target="_blank">Python Mini App</a>
+      </div>
+      <div class="project">
         <img src="react-icon.png" alt="React">
-        <h3>React Portfolio</h3>
-      </a>
-    </div>
-    <div class="project">
-      <a href="projects/php/index.html">
+        <a href="projects/react-portfolio/index.html" target="_blank">React Portfolio</a>
+      </div>
+      <div class="project">
         <img src="php-icon.png" alt="PHP">
-        <h3>PHP Login System</h3>
-      </a>
+        <a href="projects/php-login/index.html" target="_blank">PHP Login System</a>
+      </div>
     </div>
-  </div>  <div class="contact">
-    <h2>Feel free to knock me</h2>
+  </main>  <footer id="contact">
+    <p style="font-size: 20px; font-weight: bold;">Feel free to knock me:</p>
     <div class="social-icons">
       <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
         <img src="facebook.png" alt="Facebook">
@@ -188,8 +172,7 @@ footer {
         <img src="whatsapp.png" alt="WhatsApp">
       </a>
     </div>
-  </div>  <footer>
-    &copy; 2025 Symon | All rights reserved
   </footer>
 </body>
 </html>
+
