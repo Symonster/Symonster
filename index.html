@@ -30,10 +30,18 @@
       50% { transform: translateY(-5px); }
       100% { transform: translateY(0); }
     }
+
+    .glass-box {
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .project-title {
+      color: black;
+    }
   </style></head>
-<body class="text-white min-h-screen">
+<body class="min-h-screen">
   <!-- Header Section -->
-  <header class="flex items-center justify-between p-4 bg-black bg-opacity-40">
+  <header class="flex items-center justify-between p-4 bg-black bg-opacity-80">
     <div class="flex items-center text-2xl font-bold">
       <span class="text-animation">
         <span class="letter">S</span>
@@ -45,46 +53,46 @@
       <img src="eren-titan.jpg" alt="Eren Titan" class="w-8 h-8 ml-2 animate-bounce">
     </div>
     <nav>
-      <a href="#contact" class="text-blue-400 hover:underline animate-pulse">Hire Me</a>
+      <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 animate-bounce">Hire Me</a>
     </nav>
   </header>  <!-- Main Content -->  <main class="p-4">
     <section>
-      <h1 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h1>
-      <p class="text-lg">I'm Symon, a passionate coder and designer.</p>
+      <h1 class="text-4xl font-bold mb-4 text-black">Hi, it's Symon</h1>
+      <p class="text-lg text-black">I'm Symon, a passionate coder and designer.</p>
     </section><!-- Projects Section -->
 <section class="mt-10">
-  <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+  <h2 class="text-3xl font-semibold mb-4 text-black">Projects</h2>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-white">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="w-10 h-10 mb-2" alt="HTML Logo">
-      <p>HTML Project</p>
-    </div>
-    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-white">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968242.png" class="w-10 h-10 mb-2" alt="CSS Logo">
-      <p>CSS Project</p>
-    </div>
-    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-white">
+    <a href="https://github.com/Symonster/html-project" target="_blank" class="glass-box rounded-xl p-4">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="w-10 h-10 mb-2" alt="HTML Logo">
+      <p class="project-title">HTML Project</p>
+    </a>
+    <a href="https://github.com/Symonster/css-project" target="_blank" class="glass-box rounded-xl p-4">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="w-10 h-10 mb-2" alt="CSS Logo">
+      <p class="project-title">CSS Project</p>
+    </a>
+    <a href="https://github.com/Symonster/js-game" target="_blank" class="glass-box rounded-xl p-4">
       <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="w-10 h-10 mb-2" alt="JavaScript Logo">
-      <p>JavaScript Game</p>
-    </div>
-    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-white">
-      <img src="https://cdn-icons-png.flaticon.com/512/919/919827.png" class="w-10 h-10 mb-2" alt="Python Logo">
-      <p>Python Mini App</p>
-    </div>
-    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-white">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" class="w-10 h-10 mb-2" alt="React Logo">
-      <p>React Portfolio</p>
-    </div>
-    <div class="bg-white bg-opacity-20 rounded-xl p-4 text-white">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="w-10 h-10 mb-2" alt="PHP Logo">
-      <p>PHP Login System</p>
-    </div>
+      <p class="project-title">JavaScript Game</p>
+    </a>
+    <a href="https://github.com/Symonster/python-app" target="_blank" class="glass-box rounded-xl p-4">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="w-10 h-10 mb-2" alt="Python Logo">
+      <p class="project-title">Python Mini App</p>
+    </a>
+    <a href="https://github.com/Symonster/react-portfolio" target="_blank" class="glass-box rounded-xl p-4">
+      <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" class="w-10 h-10 mb-2" alt="React Logo">
+      <p class="project-title">React Portfolio</p>
+    </a>
+    <a href="https://github.com/Symonster/php-login" target="_blank" class="glass-box rounded-xl p-4">
+      <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="w-10 h-10 mb-2" alt="PHP Logo">
+      <p class="project-title">PHP Login System</p>
+    </a>
   </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="mt-10">
-  <h2 class="text-3xl font-semibold mb-4">Feel free to knock me</h2>
+  <h2 class="text-3xl font-semibold mb-4 text-black">Feel free to knock me</h2>
   <div class="flex gap-4">
     <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-8 h-8 hover:scale-110 transition-transform">
