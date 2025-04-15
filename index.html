@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -20,8 +21,8 @@
       padding-bottom: 2rem;
     }
     .card {
-      background-color: rgba(255, 255, 255, 0.85);
-      color: black;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
       border-radius: 1rem;
       padding: 1rem;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -44,13 +45,34 @@
         transform: translateY(-5px);
       }
     }
+    .live-tag {
+      background: red;
+      color: white;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.4rem;
+      border-radius: 0.25rem;
+      margin-left: 0.5rem;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.4; }
+      100% { opacity: 1; }
+    }
   </style>
 </head>
 <body>
   <div class="overlay">
     <!-- Navbar -->
     <nav class="p-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-white">Symon</h1>
+      <div class="flex items-center space-x-1 text-2xl font-bold">
+        <span class="text-red-500">S</span>
+        <span class="text-orange-400">Y</span>
+        <span class="text-yellow-400">M</span>
+        <span class="text-green-400">O</span>
+        <span class="text-blue-400">N</span>
+        <span class="live-tag">LIVE</span>
+      </div>
       <a href="#contact" class="text-white bg-blue-600 px-4 py-2 rounded hire-button hover:bg-blue-800 transition">Hire Me</a>
     </nav><!-- Header -->
 <div class="text-center mt-10">
@@ -63,22 +85,22 @@
 <!-- Projects Section -->
 <div class="flex flex-wrap justify-between max-w-6xl mx-auto mt-10 px-6">
   <!-- Left Projects -->
-  <div class="w-full md:w-5/12">
-    <div class="card">
+  <div class="w-full md:w-5/12 flex flex-col items-start">
+    <div class="card w-full">
       <i class="fas fa-list-check"></i>
       <div>
         <h2 class="text-xl font-semibold mb-1">To-Do List App</h2>
         <p>Simple task manager to add, mark and delete tasks.</p>
       </div>
     </div>
-    <div class="card">
+    <div class="card w-full">
       <i class="fas fa-sun"></i>
       <div>
         <h2 class="text-xl font-semibold mb-1">Weather App</h2>
         <p>Real-time weather info using API.</p>
       </div>
     </div>
-    <div class="card">
+    <div class="card w-full">
       <i class="fas fa-coins"></i>
       <div>
         <h2 class="text-xl font-semibold mb-1">Currency Converter</h2>
@@ -87,22 +109,22 @@
     </div>
   </div>
   <!-- Right Projects -->
-  <div class="w-full md:w-5/12">
-    <div class="card">
+  <div class="w-full md:w-5/12 flex flex-col items-end">
+    <div class="card w-full">
       <i class="fas fa-calculator"></i>
       <div>
         <h2 class="text-xl font-semibold mb-1">Calculator</h2>
         <p>Basic calculator for math operations.</p>
       </div>
     </div>
-    <div class="card">
+    <div class="card w-full">
       <i class="fas fa-note-sticky"></i>
       <div>
         <h2 class="text-xl font-semibold mb-1">Notes App</h2>
         <p>Write and store personal notes.</p>
       </div>
     </div>
-    <div class="card">
+    <div class="card w-full">
       <i class="fas fa-laptop-code"></i>
       <div>
         <h2 class="text-xl font-semibold mb-1">Portfolio Website</h2>
