@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Symon</title>
+  <title>Symon's Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
@@ -12,7 +11,6 @@
       padding: 0;
       background: url('your-image.jpg.jpeg') no-repeat center 30% fixed;
       background-size: cover;
-      background-position: center 30%;
       color: white;
       font-family: sans-serif;
     }
@@ -21,9 +19,30 @@
       min-height: 100vh;
       padding-bottom: 2rem;
     }
-    .card:hover {
-      transform: scale(1.05);
-      transition: transform 0.3s ease-in-out;
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      color: black;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+    .card i {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+    .hire-button {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
     }
   </style>
 </head>
@@ -32,61 +51,84 @@
     <!-- Navbar -->
     <nav class="p-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold text-white">Symon</h1>
-      <a href="#contact" class="text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-800 transition">Hire Me</a>
-    </nav>
+      <a href="#contact" class="text-white bg-blue-600 px-4 py-2 rounded hire-button hover:bg-blue-800 transition">Hire Me</a>
+    </nav><!-- Header -->
+<div class="text-center mt-10">
+  <h1 class="text-4xl font-bold mb-4">Symon</h1>
+  <p>Email: su2403703@gmail.com</p>
+  <p>Phone: +965 97707393</p>
+  <p>Address: Hawally, Kuwait</p>
+</div>
 
-    <!-- Header -->
-    <div class="text-center mt-10">
-      <h1 class="text-4xl font-bold mb-4">Symon</h1>
-      <p>Email: su2403703@gmail.com</p>
-      <p>Phone: +965 97707393</p>
-      <p>Address: Hawally, Kuwait</p>
-    </div>
-
-    <!-- Projects Section -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto my-10 px-6">
-      <div class="bg-white bg-opacity-80 text-black rounded-2xl p-4 shadow-xl card">
-        <h2 class="text-xl font-semibold mb-2">To-Do List App</h2>
-        <p>A simple task management app where users can add, complete, and delete tasks.</p>
-      </div>
-      <div class="bg-white bg-opacity-80 text-black rounded-2xl p-4 shadow-xl card">
-        <h2 class="text-xl font-semibold mb-2">Weather App</h2>
-        <p>Users can view real-time weather data for any city using an API.</p>
-      </div>
-      <div class="bg-white bg-opacity-80 text-black rounded-2xl p-4 shadow-xl card">
-        <h2 class="text-xl font-semibold mb-2">Currency Converter</h2>
-        <p>Convert value between two currencies using exchange rates.</p>
-      </div>
-      <div class="bg-white bg-opacity-80 text-black rounded-2xl p-4 shadow-xl card">
-        <h2 class="text-xl font-semibold mb-2">Calculator</h2>
-        <p>A basic calculator app that can perform addition, subtraction, multiplication, and division.</p>
-      </div>
-      <div class="bg-white bg-opacity-80 text-black rounded-2xl p-4 shadow-xl card">
-        <h2 class="text-xl font-semibold mb-2">Notes App</h2>
-        <p>Users can write and store short notes and read them later.</p>
-      </div>
-      <div class="bg-white bg-opacity-80 text-black rounded-2xl p-4 shadow-xl card">
-        <h2 class="text-xl font-semibold mb-2">Portfolio Website</h2>
-        <p>This website! A portfolio sharing my name, contact info, and project showcase.</p>
+<!-- Projects Section -->
+<div class="flex flex-wrap justify-between max-w-6xl mx-auto mt-10 px-6">
+  <!-- Left Projects -->
+  <div class="w-full md:w-5/12">
+    <div class="card">
+      <i class="fas fa-list-check"></i>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">To-Do List App</h2>
+        <p>Simple task manager to add, mark and delete tasks.</p>
       </div>
     </div>
-
-    <!-- Footer / Contact -->
-    <footer id="contact" class="text-center py-8">
-      <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
-      <div class="flex justify-center space-x-8 text-white text-3xl">
-        <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank" class="hover:text-blue-500">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/symonster__/" target="_blank" class="hover:text-pink-500">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://wa.me/96597707393" target="_blank" class="hover:text-green-400">
-          <i class="fab fa-whatsapp"></i>
-        </a>
+    <div class="card">
+      <i class="fas fa-sun"></i>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Weather App</h2>
+        <p>Real-time weather info using API.</p>
       </div>
-      <p class="mt-4">Feel free to contact me anytime!</p>
-    </footer>
+    </div>
+    <div class="card">
+      <i class="fas fa-coins"></i>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Currency Converter</h2>
+        <p>Convert value between currencies.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Right Projects -->
+  <div class="w-full md:w-5/12">
+    <div class="card">
+      <i class="fas fa-calculator"></i>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Calculator</h2>
+        <p>Basic calculator for math operations.</p>
+      </div>
+    </div>
+    <div class="card">
+      <i class="fas fa-note-sticky"></i>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Notes App</h2>
+        <p>Write and store personal notes.</p>
+      </div>
+    </div>
+    <div class="card">
+      <i class="fas fa-laptop-code"></i>
+      <div>
+        <h2 class="text-xl font-semibold mb-1">Portfolio Website</h2>
+        <p>This portfolio with projects and contact.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer / Contact -->
+<footer id="contact" class="text-center py-8">
+  <h2 class="text-2xl font-semibold mb-4">Contact Me</h2>
+  <div class="flex justify-center space-x-8 text-white text-3xl">
+    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank" class="hover:text-blue-500">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/symonster__/" target="_blank" class="hover:text-pink-500">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/96597707393" target="_blank" class="hover:text-green-400">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <p class="mt-4">Feel free to contact me anytime!</p>
+</footer>
+
   </div>
 </body>
 </html>
