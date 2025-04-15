@@ -1,111 +1,175 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Symon's Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>  <style>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symon Portfolio</title>
+  <style>
     body {
-      background-image: url('your-image.jpg.jpeg');
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('your-image.jpg.jpeg') no-repeat center top;
       background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-    }
-
-    .text-animation .letter {
-      display: inline-block;
-      animation: colorChange 2s infinite, float 3s ease-in-out infinite;
-    }
-
-    @keyframes colorChange {
-      0% { color: #000000; }
-      25% { color: #1E90FF; }
-      50% { color: #000000; }
-      75% { color: #1E90FF; }
-      100% { color: #000000; }
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
-      100% { transform: translateY(0); }
-    }
-
-    .glass-box {
-      background-color: rgba(255, 255, 255, 0.6);
-    }
-
-    .project-title {
       color: black;
-    }
-  </style></head>
-<body class="min-h-screen">
-  <!-- Header Section -->
-  <header class="flex items-center justify-between p-4 bg-black bg-opacity-80">
-    <div class="flex items-center text-2xl font-bold">
-      <span class="text-animation">
-        <span class="letter">S</span>
-        <span class="letter">y</span>
-        <span class="letter">m</span>
-        <span class="letter">o</span>
-        <span class="letter">n</span>
-      </span>
-      <img src="eren-titan.jpg" alt="Eren Titan" class="w-8 h-8 ml-2 animate-bounce">
+    }header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  animation: colorChange 2s infinite;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo span {
+  animation: bounce 1s infinite alternate;
+}
+
+.logo img {
+  height: 30px;
+}
+
+@keyframes colorChange {
+  0% { color: #3498db; }
+  50% { color: #000000; }
+  100% { color: #3498db; }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-5px); }
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  animation: shake 1s infinite alternate;
+  background-color: black;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(5px); }
+}
+
+.intro {
+  text-align: center;
+  padding: 100px 30px 40px;
+}
+
+.intro h1 {
+  font-size: 40px;
+  color: black;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-box {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project-box:hover {
+  transform: scale(1.05);
+}
+
+.project-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.contact {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.contact-icons a {
+  margin: 0 10px;
+}
+
+.contact-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+  </style>
+</head><body>
+  <header>
+    <div class="logo">
+      <span>S</span><span>y</span><span>m</span><span>o</span><span>n</span>
+      <img src="eren-titan.jpg" alt="Live Icon">
     </div>
     <nav>
-      <a href="#contact" class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 animate-bounce">Hire Me</a>
+      <a href="#contact">Hire Me</a>
     </nav>
-  </header>  <!-- Main Content -->  <main class="p-4">
-    <section>
-      <h1 class="text-4xl font-bold mb-4 text-black">Hi, it's Symon</h1>
-      <p class="text-lg text-black">I'm Symon, a passionate coder and designer.</p>
-    </section><!-- Projects Section -->
-<section class="mt-10">
-  <h2 class="text-3xl font-semibold mb-4 text-black">Projects</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <a href="https://github.com/Symonster/html-project" target="_blank" class="glass-box rounded-xl p-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="w-10 h-10 mb-2" alt="HTML Logo">
-      <p class="project-title">HTML Project</p>
-    </a>
-    <a href="https://github.com/Symonster/css-project" target="_blank" class="glass-box rounded-xl p-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" class="w-10 h-10 mb-2" alt="CSS Logo">
-      <p class="project-title">CSS Project</p>
-    </a>
-    <a href="https://github.com/Symonster/js-game" target="_blank" class="glass-box rounded-xl p-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" class="w-10 h-10 mb-2" alt="JavaScript Logo">
-      <p class="project-title">JavaScript Game</p>
-    </a>
-    <a href="https://github.com/Symonster/python-app" target="_blank" class="glass-box rounded-xl p-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" class="w-10 h-10 mb-2" alt="Python Logo">
-      <p class="project-title">Python Mini App</p>
-    </a>
-    <a href="https://github.com/Symonster/react-portfolio" target="_blank" class="glass-box rounded-xl p-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/1126/1126012.png" class="w-10 h-10 mb-2" alt="React Logo">
-      <p class="project-title">React Portfolio</p>
-    </a>
-    <a href="https://github.com/Symonster/php-login" target="_blank" class="glass-box rounded-xl p-4">
-      <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" class="w-10 h-10 mb-2" alt="PHP Logo">
-      <p class="project-title">PHP Login System</p>
-    </a>
+  </header>  <div class="intro">
+    <h1>Hi, it's Symon</h1>
+  </div>  <div class="projects">
+    <div class="column">
+      <a href="projects/html/index.html" class="project-box">
+        <img src="https://img.icons8.com/color/48/html-5.png" alt="HTML">
+        <div>HTML Project</div>
+      </a>
+      <a href="projects/css/index.html" class="project-box">
+        <img src="https://img.icons8.com/color/48/css3.png" alt="CSS">
+        <div>CSS Project</div>
+      </a>
+      <a href="projects/js/index.html" class="project-box">
+        <img src="https://img.icons8.com/color/48/javascript.png" alt="JavaScript">
+        <div>JavaScript Game</div>
+      </a>
+    </div>
+    <div class="column">
+      <a href="projects/python/index.html" class="project-box">
+        <img src="https://img.icons8.com/color/48/python.png" alt="Python">
+        <div>Python Mini App</div>
+      </a>
+      <a href="projects/react/index.html" class="project-box">
+        <img src="https://img.icons8.com/color/48/react-native.png" alt="React">
+        <div>React Portfolio</div>
+      </a>
+      <a href="projects/php/index.html" class="project-box">
+        <img src="https://img.icons8.com/officel/40/php-logo.png" alt="PHP">
+        <div>PHP Login System</div>
+      </a>
+    </div>
+  </div>  <div class="contact" id="contact">
+    <h2>Feel free to knock me</h2>
+    <div class="contact-icons">
+      <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
+        <img src="facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/symonster__/" target="_blank">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+      <a href="https://wa.me/96597707393" target="_blank">
+        <img src="whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
   </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="mt-10">
-  <h2 class="text-3xl font-semibold mb-4 text-black">Feel free to knock me</h2>
-  <div class="flex gap-4">
-    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" class="w-8 h-8 hover:scale-110 transition-transform">
-    </a>
-    <a href="https://www.instagram.com/symonster__/" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="w-8 h-8 hover:scale-110 transition-transform">
-    </a>
-    <a href="https://wa.me/96597707393" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="w-8 h-8 hover:scale-110 transition-transform">
-    </a>
-  </div>
-</section>
-
-  </main>
-</body>
-</html>
+</body></html>
