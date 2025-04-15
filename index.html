@@ -6,127 +6,142 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('your-image.jpg.jpeg') no-repeat center center fixed;
-      background-size: cover;
+      padding: 0;
+      font-family: Arial, sans-serif;
       color: black;
-    }
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar h1 {
-      font-size: 24px;
-      background: linear-gradient(to right, black 50%, blue 50%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: colorShift 4s infinite alternate;
-    }
-    @keyframes colorShift {
-      0% {transform: scale(1);}
-      50% {transform: scale(1.1);}
-      100% {transform: scale(1);}
-    }
-    .navbar .live {
-      display: flex;
-      align-items: center;
-    }
-    .navbar .live img {
-      width: 30px;
-      margin-left: 10px;
-    }
-    .navbar .hire {
-      animation: pulse 1s infinite;
-      background-color: black;
-      color: white;
-      padding: 8px 16px;
-      border-radius: 20px;
-    }
-    @keyframes pulse {
-      0% {transform: scale(1);}
-      50% {transform: scale(1.05);}
-      100% {transform: scale(1);}
-    }
-    .content {
-      padding: 50px;
-    }
-    .social-icons img {
-      margin: 10px;
-      width: 40px;
-      transition: transform 0.3s ease;
-    }
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-    .projects-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 20px;
-    }
-    .project {
-      width: 45%;
-      margin: 10px;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .project img {
-      display: block;
-      margin: 0 auto 10px;
-      width: 50px;
-    }
+      background: url('your-image.jpg.jpeg') no-repeat center top;
+      background-size: cover;
+    }header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  animation: colorChange 4s infinite alternate;
+}
+
+@keyframes colorChange {
+  0% { color: #000; }
+  50% { color: #007BFF; }
+  100% { color: #000; }
+}
+
+.live-sticker {
+  margin-left: 10px;
+  vertical-align: middle;
+  height: 25px;
+}
+
+nav {
+  background-color: black;
+  padding: 10px 20px;
+  text-align: right;
+  animation: pulse 1.5s infinite;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.content {
+  padding: 50px;
+  text-align: center;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.project {
+  width: 45%;
+  margin: 15px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.project img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons img {
+  width: 40px;
+  margin: 0 10px;
+}
+
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <div class="live">
-      <h1>Symon</h1>
-      <img src="eren-titan.jpg" alt="Live" />
-    </div>
-    <div class="hire">Hire Me</div>
-  </div>  <div class="content">
-    <h2>Hi, it's Symon</h2><div class="social-icons">
-  <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
-    <img src="facebook.png" alt="Facebook" />
-  </a>
-  <a href="https://www.instagram.com/symonster__/" target="_blank">
-    <img src="instagram.png" alt="Instagram" />
-  </a>
-  <a href="https://wa.me/96597707393" target="_blank">
-    <img src="whatsapp.png" alt="WhatsApp" />
-  </a>
+  <header>
+    <div class="logo">Symon <img src="eren-titan.jpg" alt="Live" class="live-sticker"></div>
+    <nav><a href="#">Hire Me</a></nav>
+  </header>  <div class="content">
+    <h1>Hi, it's Symon</h1>
+    <p>Welcome to my digital portfolio</p><div class="projects">
+  <div class="project">
+    <img src="html-logo.png" alt="HTML Project">
+    <h3>HTML Project</h3>
+    <a href="projects/html-project/index.html" target="_blank">View Project</a>
+  </div>
+  <div class="project">
+    <img src="css-logo.png" alt="CSS Project">
+    <h3>CSS Project</h3>
+    <a href="projects/css-project/index.html" target="_blank">View Project</a>
+  </div>
+  <div class="project">
+    <img src="js-logo.png" alt="JS Game">
+    <h3>JavaScript Game</h3>
+    <a href="projects/js-game/index.html" target="_blank">Play Game</a>
+  </div>
+  <div class="project">
+    <img src="python-logo.png" alt="Python App">
+    <h3>Python Mini App</h3>
+    <a href="projects/python-app/index.html" target="_blank">Try App</a>
+  </div>
+  <div class="project">
+    <img src="react-logo.png" alt="React Portfolio">
+    <h3>React Portfolio</h3>
+    <a href="projects/react-portfolio/index.html" target="_blank">View Portfolio</a>
+  </div>
+  <div class="project">
+    <img src="php-logo.png" alt="PHP Login">
+    <h3>PHP Login System</h3>
+    <a href="projects/php-login/index.php" target="_blank">Login</a>
+  </div>
 </div>
 
-<div class="projects-section">
-  <div class="project">
-    <img src="html.png" alt="HTML Project" />
-    <a href="html_project/index.html" target="_blank">HTML Project</a>
-  </div>
-  <div class="project">
-    <img src="css.png" alt="CSS Project" />
-    <a href="css_project/index.html" target="_blank">CSS Project</a>
-  </div>
-  <div class="project">
-    <img src="javascript.png" alt="JavaScript Game" />
-    <a href="javascript_game/index.html" target="_blank">JavaScript Game</a>
-  </div>
-  <div class="project">
-    <img src="python.png" alt="Python Mini App" />
-    <a href="python_app/index.html" target="_blank">Python Mini App</a>
-  </div>
-  <div class="project">
-    <img src="react.png" alt="React Portfolio" />
-    <a href="react_portfolio/index.html" target="_blank">React Portfolio</a>
-  </div>
-  <div class="project">
-    <img src="php.png" alt="PHP Login System" />
-    <a href="php_login/index.html" target="_blank">PHP Login System</a>
-  </div>
+<div class="social-icons">
+  <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
+    <img src="facebook.png" alt="Facebook">
+  </a>
+  <a href="https://www.instagram.com/symonster__/" target="_blank">
+    <img src="instagram.png" alt="Instagram">
+  </a>
+  <a href="https://wa.me/96597707393" target="_blank">
+    <img src="whatsapp.png" alt="WhatsApp">
+  </a>
 </div>
 
   </div>
