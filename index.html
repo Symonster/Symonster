@@ -10,14 +10,13 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body, html {
       height: 100%;
       font-family: Arial, sans-serif;
-      color: #fff;
+      color: white;
+      overflow-x: hidden;
     }
-
-    .background-video {
+    video#bg-video {
       position: fixed;
       right: 0;
       bottom: 0;
@@ -26,147 +25,123 @@
       z-index: -1;
       object-fit: cover;
     }
-
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 40px;
+      background: rgba(0, 0, 0, 0.6);
     }
-
     .logo {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: bold;
-      background: linear-gradient(to right, black, blue);
+      background: linear-gradient(90deg, black, blue);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: bounce 2s infinite;
+      color: transparent;
+      animation: flicker 2s infinite;
     }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
     }
-
     nav a {
+      color: white;
       text-decoration: none;
       margin-left: 20px;
-      color: white;
-      background: black;
-      padding: 8px 16px;
-      border-radius: 10px;
-      animation: pulse 1.5s infinite;
+      font-weight: bold;
     }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+    .content {
+      padding: 100px 40px;
     }
-
-    .main-content {
-      padding: 60px 20px;
-      text-align: center;
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px black;
     }
-
-    .main-content h1 {
-      font-size: 36px;
-      animation: glow 1.5s infinite alternate;
+    .social-icons img, .projects img {
+      width: 40px;
+      height: 40px;
+      margin: 10px;
+      transition: transform 0.3s ease;
     }
-
-    @keyframes glow {
-      0% { text-shadow: 0 0 5px red; }
-      100% { text-shadow: 0 0 20px orange; }
+    .social-icons img:hover, .projects img:hover {
+      transform: scale(1.1);
     }
-
-    .projects, .socials {
+    .social-icons {
       display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      margin-top: 40px;
+      justify-content: center;
+      margin-bottom: 40px;
     }
-
-    .project, .social {
-      width: 100px;
-      margin: 20px;
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 0 80px;
+    }
+    .project {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 12px;
       text-align: center;
+      backdrop-filter: blur(3px);
     }
-
-    .project img, .social img {
-      width: 60px;
-      height: 60px;
-    }
-
-    .project a, .social a {
-      color: white;
+    .project a {
       text-decoration: none;
+      color: white;
       display: block;
       margin-top: 10px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <!-- Background video -->
-  <video autoplay muted loop class="background-video">
-    <source src="your-video.mp4.mp4" type="video/mp4">
-  </video>
 
-  <!-- Navbar -->
-  <header>
-    <div class="logo">Symon</div>
-    <nav>
-      <a href="#contact">Hire Me</a>
-    </nav>
-  </header>
+<video autoplay muted loop id="bg-video">
+  <source src="your-video.mp4.mp4" type="video/mp4" />
+</video>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <h1>Hi, it's Symon</h1>
+<header>
+  <div class="logo">Symon</div>
+  <nav>
+    <a href="#hireme">Hire Me</a>
+  </nav>
+</header>
 
-    <!-- Projects -->
-    <div class="projects">
-      <div class="project">
-        <img src="html-icon.png" alt="HTML">
-        <a href="html-project/index.html" target="_blank">HTML Project</a>
-      </div>
-      <div class="project">
-        <img src="css-icon.png" alt="CSS">
-        <a href="css-project/index.html" target="_blank">CSS Project</a>
-      </div>
-      <div class="project">
-        <img src="js-icon.png" alt="JavaScript">
-        <a href="js-game/index.html" target="_blank">JS Game</a>
-      </div>
-      <div class="project">
-        <img src="python-icon.png" alt="Python">
-        <a href="python-mini-app/index.html" target="_blank">Python App</a>
-      </div>
-      <div class="project">
-        <img src="react-icon.png" alt="React">
-        <a href="react-portfolio/index.html" target="_blank">React Portfolio</a>
-      </div>
-      <div class="project">
-        <img src="php-icon.png" alt="PHP">
-        <a href="php-login-system/index.html" target="_blank">PHP Login</a>
-      </div>
+<div class="content">
+  <h1>Hi, it's Symon</h1>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
+    <a href="https://www.instagram.com/symonster__/" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
+    <a href="https://wa.me/96597707393" target="_blank"><img src="whatsapp.png" alt="WhatsApp" /></a>
+  </div>
+
+  <div class="projects">
+    <div class="project">
+      <img src="html.png" alt="HTML Project" />
+      <a href="projects/html-project/index.html" target="_blank">HTML Project</a>
     </div>
-
-    <!-- Social Media -->
-    <div class="socials" id="contact">
-      <div class="social">
-        <img src="facebook.png" alt="Facebook">
-        <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">Facebook</a>
-      </div>
-      <div class="social">
-        <img src="instagram.png" alt="Instagram">
-        <a href="https://www.instagram.com/symonster__/" target="_blank">Instagram</a>
-      </div>
-      <div class="social">
-        <img src="whatsapp.png" alt="WhatsApp">
-        <a href="https://wa.me/96597707393" target="_blank">WhatsApp</a>
-      </div>
+    <div class="project">
+      <img src="css.png" alt="CSS Project" />
+      <a href="projects/css-project/index.html" target="_blank">CSS Project</a>
+    </div>
+    <div class="project">
+      <img src="javascript.png" alt="JavaScript Game" />
+      <a href="projects/js-game/index.html" target="_blank">JavaScript Game</a>
+    </div>
+    <div class="project">
+      <img src="python.png" alt="Python App" />
+      <a href="projects/python-app/index.html" target="_blank">Python Mini App</a>
+    </div>
+    <div class="project">
+      <img src="react.png" alt="React Portfolio" />
+      <a href="projects/react-portfolio/index.html" target="_blank">React Portfolio</a>
+    </div>
+    <div class="project">
+      <img src="php.png" alt="PHP Login" />
+      <a href="projects/php-login/index.php" target="_blank">PHP Login System</a>
     </div>
   </div>
+</div>
+
 </body>
 </html>
