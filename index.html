@@ -1,137 +1,182 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Symon's Portfolio</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+    body {
       font-family: Arial, sans-serif;
+      color: #fff;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    body, html {
-      height: 100%;
-      overflow: hidden;
-    }
-    .background-video {
+
+    #background-video {
       position: fixed;
-      right: 0;
-      bottom: 0;
+      top: 0;
+      left: 0;
       min-width: 100%;
       min-height: 100%;
-      z-index: -1;
       object-fit: cover;
+      z-index: -1;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
+      padding: 20px 50px;
+      background-color: rgba(0, 0, 0, 0.6);
     }
+
     .logo {
       font-size: 32px;
       font-weight: bold;
-      background: linear-gradient(to right, black, blue);
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: flicker 2s infinite;
+      animation: colorChange 5s infinite;
     }
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
+
+    @keyframes colorChange {
+      0% { color: #3498db; }
+      25% { color: #e74c3c; }
+      50% { color: #2ecc71; }
+      75% { color: #9b59b6; }
+      100% { color: #3498db; }
     }
+
     nav a {
-      margin-left: 20px;
+      color: #fff;
       text-decoration: none;
-      color: white;
+      margin-left: 30px;
       font-weight: bold;
-      background-color: black;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: transform 0.3s;
+      transition: 0.3s;
     }
+
     nav a:hover {
-      transform: scale(1.1);
+      color: #ff9900;
     }
+
     .content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      padding: 80px 50px;
       text-align: center;
-      color: white;
+      animation: glow 2s ease-in-out infinite alternate;
     }
-    .content h1 {
-      font-size: 48px;
-      animation: fireEffect 3s infinite;
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ff9900;
+      }
+      to {
+        text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffff00, 0 0 40px #ff6600;
+      }
     }
-    @keyframes fireEffect {
-      0%, 100% { text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 20px yellow; }
-      50% { text-shadow: 0 0 10px yellow, 0 0 20px red, 0 0 30px orange; }
-    }
+
     .projects, .social {
-      position: absolute;
       display: flex;
-      flex-direction: column;
-      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
     }
-    .projects {
-      left: 30px;
-      top: 50%;
-      transform: translateY(-50%);
+
+    .project, .social a {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #fff;
+      padding: 20px;
+      margin: 15px;
+      width: 200px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.4s;
     }
-    .social {
-      right: 30px;
-      top: 50%;
-      transform: translateY(-50%);
+
+    .project:hover, .social a:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
     }
-    .projects a, .social a {
-      display: flex;
-      align-items: center;
-      color: white;
-      text-decoration: none;
-      background-color: rgba(0,0,0,0.5);
-      padding: 10px;
-      border-radius: 8px;
-      transition: background 0.3s;
+
+    .project img, .social img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
     }
-    .projects a:hover, .social a:hover {
-      background-color: rgba(255,255,255,0.2);
-    }
-    .projects img, .social img {
-      height: 30px;
-      width: 30px;
-      margin-right: 10px;
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop class="background-video">
-    <source src="your-video.mp4" type="video/mp4">
-    Your browser does not support HTML5 video.
-  </video>  <header>
+  <video autoplay muted loop id="background-video">
+    <source src="your-video.mp4.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
     <div class="logo">Symon</div>
     <nav>
-      <a href="#">Hire Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Hire Me</a>
     </nav>
-  </header>  <div class="content">
+  </header>
+
+  <section class="content">
     <h1>Hi, it's Symon</h1>
-  </div>  <div class="projects">
-    <a href="#"><img src="html.png" alt="HTML">HTML Project</a>
-    <a href="#"><img src="css.png" alt="CSS">CSS Project</a>
-    <a href="#"><img src="javascript.png" alt="JS">JavaScript Game</a>
-    <a href="#"><img src="python.png" alt="Python">Python Mini App</a>
-    <a href="#"><img src="react.png" alt="React">React Portfolio</a>
-    <a href="#"><img src="php.png" alt="PHP">PHP Login System</a>
-  </div>  <div class="social">
-    <a href="https://www.facebook.com/shakawat.hussain.944"><img src="facebook.png" alt="FB">Facebook</a>
-    <a href="https://www.instagram.com/symonster__/"><img src="instagram.png" alt="IG">Instagram</a>
-    <a href="https://wa.me/96597707393"><img src="whatsapp.png" alt="WA">WhatsApp</a>
-  </div>
+    <p>Welcome to my digital portfolio</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="project">
+      <img src="html-icon.png" alt="HTML Project">
+      <p><a href="html-project/index.html" target="_blank">HTML Project</a></p>
+    </div>
+    <div class="project">
+      <img src="css-icon.png" alt="CSS Project">
+      <p><a href="css-project/index.html" target="_blank">CSS Project</a></p>
+    </div>
+    <div class="project">
+      <img src="js-icon.png" alt="JavaScript Game">
+      <p><a href="js-game/index.html" target="_blank">JS Game</a></p>
+    </div>
+    <div class="project">
+      <img src="python-icon.png" alt="Python App">
+      <p><a href="python-app/index.html" target="_blank">Python App</a></p>
+    </div>
+    <div class="project">
+      <img src="react-icon.png" alt="React Portfolio">
+      <p><a href="react-portfolio/index.html" target="_blank">React Portfolio</a></p>
+    </div>
+    <div class="project">
+      <img src="php-icon.png" alt="PHP Login System">
+      <p><a href="php-login/index.php" target="_blank">PHP Login System</a></p>
+    </div>
+  </section>
+
+  <section id="contact" class="social">
+    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
+      <img src="facebook.png" alt="Facebook">
+      <p>Facebook</p>
+    </a>
+    <a href="https://www.instagram.com/symonster__/" target="_blank">
+      <img src="instagram.png" alt="Instagram">
+      <p>Instagram</p>
+    </a>
+    <a href="https://wa.me/96597707393" target="_blank">
+      <img src="whatsapp.png" alt="WhatsApp">
+      <p>WhatsApp</p>
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Symon. All rights reserved.</p>
+  </footer>
 </body>
 </html>
