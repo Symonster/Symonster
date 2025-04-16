@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Symon's Portfolio</title>
   <style>
     * {
@@ -16,132 +15,125 @@
       color: white;
       overflow-x: hidden;
     }
-    video#bg-video {
+    .video-bg {
       position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      z-index: -1;
     }
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
     }
     .logo {
       font-size: 24px;
       font-weight: bold;
-      background: linear-gradient(90deg, black, blue);
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: flicker 2s infinite;
+      color: #00bcd4;
     }
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
+    .live-icon {
+      height: 24px;
+      vertical-align: middle;
+      margin-left: 10px;
     }
     nav a {
       color: white;
-      text-decoration: none;
       margin-left: 20px;
+      text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff4081;
     }
     .content {
-      padding: 100px 40px;
+      text-align: center;
+      padding: 100px 20px 20px;
     }
-    h1 {
+    .content h1 {
       font-size: 48px;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px black;
+      text-shadow: 0 0 10px #ff5722;
     }
-    .social-icons img, .projects img {
-      width: 40px;
-      height: 40px;
-      margin: 10px;
-      transition: transform 0.3s ease;
-    }
-    .social-icons img:hover, .projects img:hover {
-      transform: scale(1.1);
-    }
-    .social-icons {
+    .social-icons, .project-icons {
+      margin-top: 40px;
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-      padding: 0 80px;
-    }
-    .project {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      backdrop-filter: blur(3px);
-    }
-    .project a {
+    .social-icons a, .project-icons a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-decoration: none;
       color: white;
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
+      font-size: 14px;
+    }
+    .social-icons img, .project-icons img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
-
-<video autoplay muted loop id="bg-video">
-  <source src="your-video.mp4.mp4" type="video/mp4" />
-</video>
-
-<header>
-  <div class="logo">Symon</div>
-  <nav>
-    <a href="#hireme">Hire Me</a>
-  </nav>
-</header>
-
-<div class="content">
-  <h1>Hi, it's Symon</h1>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank"><img src="facebook.png" alt="Facebook" /></a>
-    <a href="https://www.instagram.com/symonster__/" target="_blank"><img src="instagram.png" alt="Instagram" /></a>
-    <a href="https://wa.me/96597707393" target="_blank"><img src="whatsapp.png" alt="WhatsApp" /></a>
-  </div>
-
-  <div class="projects">
-    <div class="project">
-      <img src="html.png" alt="HTML Project" />
-      <a href="projects/html-project/index.html" target="_blank">HTML Project</a>
+  <video autoplay muted loop class="video-bg">
+    <source src="your-video.mp4.mp4" type="video/mp4" />
+  </video>  <header>
+    <div class="logo">
+      Symon <img src="eren-titan.jpg" class="live-icon" alt="Live" />
     </div>
-    <div class="project">
-      <img src="css.png" alt="CSS Project" />
-      <a href="projects/css-project/index.html" target="_blank">CSS Project</a>
-    </div>
-    <div class="project">
-      <img src="javascript.png" alt="JavaScript Game" />
-      <a href="projects/js-game/index.html" target="_blank">JavaScript Game</a>
-    </div>
-    <div class="project">
-      <img src="python.png" alt="Python App" />
-      <a href="projects/python-app/index.html" target="_blank">Python Mini App</a>
-    </div>
-    <div class="project">
-      <img src="react.png" alt="React Portfolio" />
-      <a href="projects/react-portfolio/index.html" target="_blank">React Portfolio</a>
-    </div>
-    <div class="project">
-      <img src="php.png" alt="PHP Login" />
-      <a href="projects/php-login/index.php" target="_blank">PHP Login System</a>
-    </div>
-  </div>
+    <nav>
+      <a href="#">Hire Me</a>
+    </nav>
+  </header>  <div class="content">
+    <h1>Hi, it's Symon</h1><div class="social-icons">
+  <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
+    <img src="facebook.png" alt="Facebook" />
+    Facebook
+  </a>
+  <a href="https://www.instagram.com/symonster__/" target="_blank">
+    <img src="instagram.png" alt="Instagram" />
+    Instagram
+  </a>
+  <a href="https://wa.me/96597707393" target="_blank">
+    <img src="whatsapp.png" alt="WhatsApp" />
+    WhatsApp
+  </a>
 </div>
 
+<div class="project-icons">
+  <a href="html-project.html" target="_blank">
+    <img src="html-logo.png" alt="HTML Project" />
+    HTML Project
+  </a>
+  <a href="css-project.html" target="_blank">
+    <img src="css-logo.png" alt="CSS Project" />
+    CSS Project
+  </a>
+  <a href="javascript-game.html" target="_blank">
+    <img src="js-logo.png" alt="JS Game" />
+    JavaScript Game
+  </a>
+  <a href="python-app.html" target="_blank">
+    <img src="python-logo.png" alt="Python App" />
+    Python Mini App
+  </a>
+  <a href="react-portfolio.html" target="_blank">
+    <img src="react-logo.png" alt="React" />
+    React Portfolio
+  </a>
+  <a href="php-login.html" target="_blank">
+    <img src="php-logo.png" alt="PHP Login" />
+    PHP Login System
+  </a>
+</div>
+
+  </div>
 </body>
 </html>
