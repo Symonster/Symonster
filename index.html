@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Symon's Portfolio</title>
   <style>
     * {
@@ -9,136 +10,163 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body, html {
       height: 100%;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       color: #fff;
-      position: relative;
-      overflow-x: hidden;
     }
-    #background-video {
+
+    .background-video {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
       z-index: -1;
+      object-fit: cover;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
     }
+
     .logo {
-      font-size: 30px;
+      font-size: 28px;
       font-weight: bold;
-      color: #00f5d4;
-      animation: colorChange 2s infinite alternate;
+      background: linear-gradient(to right, black, blue);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: bounce 2s infinite;
     }
-    @keyframes colorChange {
-      0% { color: #00f5d4; }
-      100% { color: #3c9ee7; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
+
     nav a {
-      color: #fff;
       text-decoration: none;
       margin-left: 20px;
-      font-size: 18px;
-      background: rgba(0,0,0,0.4);
-      padding: 5px 15px;
-      border-radius: 5px;
-      transition: 0.3s ease;
+      color: white;
+      background: black;
+      padding: 8px 16px;
+      border-radius: 10px;
+      animation: pulse 1.5s infinite;
     }
-    nav a:hover {
-      background: #fff;
-      color: #000;
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
-    .main {
+
+    .main-content {
       padding: 60px 20px;
       text-align: center;
     }
-    h1 {
-      font-size: 50px;
-      text-shadow: 0 0 10px red, 0 0 20px orange;
+
+    .main-content h1 {
+      font-size: 36px;
+      animation: glow 1.5s infinite alternate;
     }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 5px red; }
+      100% { text-shadow: 0 0 20px orange; }
+    }
+
+    .projects, .socials {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
       margin-top: 40px;
     }
-    .project {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      backdrop-filter: blur(5px);
+
+    .project, .social {
+      width: 100px;
+      margin: 20px;
+      text-align: center;
     }
-    .project img {
-      width: 50px;
-      height: 50px;
+
+    .project img, .social img {
+      width: 60px;
+      height: 60px;
     }
-    .social {
-      margin-top: 40px;
-    }
-    .social img {
-      width: 40px;
-      height: 40px;
-      margin: 0 10px;
-      vertical-align: middle;
+
+    .project a, .social a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop id="background-video">
+  <!-- Background video -->
+  <video autoplay muted loop class="background-video">
     <source src="your-video.mp4.mp4" type="video/mp4">
-  </video>  <header>
+  </video>
+
+  <!-- Navbar -->
+  <header>
     <div class="logo">Symon</div>
     <nav>
-      <a href="#">Hire Me</a>
+      <a href="#contact">Hire Me</a>
     </nav>
-  </header>  <div class="main">
-    <h1>Hi, it's Symon</h1><div class="projects">
-  <div class="project">
-    <img src="html-icon.png" alt="HTML">
-    <p><a href="html-project/index.html" target="_blank">HTML Project</a></p>
-  </div>
-  <div class="project">
-    <img src="css-icon.png" alt="CSS">
-    <p><a href="css-project/index.html" target="_blank">CSS Project</a></p>
-  </div>
-  <div class="project">
-    <img src="js-icon.png" alt="JS">
-    <p><a href="js-game/index.html" target="_blank">JavaScript Game</a></p>
-  </div>
-  <div class="project">
-    <img src="python-icon.png" alt="Python">
-    <p><a href="python-app/index.html" target="_blank">Python Mini App</a></p>
-  </div>
-  <div class="project">
-    <img src="react-icon.png" alt="React">
-    <p><a href="react-portfolio/index.html" target="_blank">React Portfolio</a></p>
-  </div>
-  <div class="project">
-    <img src="php-icon.png" alt="PHP">
-    <p><a href="php-login/index.html" target="_blank">PHP Login System</a></p>
-  </div>
-</div>
+  </header>
 
-<div class="social">
-  <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
-    <img src="facebook.png" alt="Facebook">
-  </a>
-  <a href="https://www.instagram.com/symonster__/" target="_blank">
-    <img src="instagram.png" alt="Instagram">
-  </a>
-  <a href="https://wa.me/96597707393" target="_blank">
-    <img src="whatsapp.png" alt="WhatsApp">
-  </a>
-</div>
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Hi, it's Symon</h1>
 
+    <!-- Projects -->
+    <div class="projects">
+      <div class="project">
+        <img src="html-icon.png" alt="HTML">
+        <a href="html-project/index.html" target="_blank">HTML Project</a>
+      </div>
+      <div class="project">
+        <img src="css-icon.png" alt="CSS">
+        <a href="css-project/index.html" target="_blank">CSS Project</a>
+      </div>
+      <div class="project">
+        <img src="js-icon.png" alt="JavaScript">
+        <a href="js-game/index.html" target="_blank">JS Game</a>
+      </div>
+      <div class="project">
+        <img src="python-icon.png" alt="Python">
+        <a href="python-mini-app/index.html" target="_blank">Python App</a>
+      </div>
+      <div class="project">
+        <img src="react-icon.png" alt="React">
+        <a href="react-portfolio/index.html" target="_blank">React Portfolio</a>
+      </div>
+      <div class="project">
+        <img src="php-icon.png" alt="PHP">
+        <a href="php-login-system/index.html" target="_blank">PHP Login</a>
+      </div>
+    </div>
+
+    <!-- Social Media -->
+    <div class="socials" id="contact">
+      <div class="social">
+        <img src="facebook.png" alt="Facebook">
+        <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">Facebook</a>
+      </div>
+      <div class="social">
+        <img src="instagram.png" alt="Instagram">
+        <a href="https://www.instagram.com/symonster__/" target="_blank">Instagram</a>
+      </div>
+      <div class="social">
+        <img src="whatsapp.png" alt="WhatsApp">
+        <a href="https://wa.me/96597707393" target="_blank">WhatsApp</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
