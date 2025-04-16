@@ -1,146 +1,158 @@
 <!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Symon's Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: black;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('your-image.gif') no-repeat center center fixed;
-      background-size: cover;
-    }.navbar {
-  display: flex;
-  justify-content: flex-end;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symon's Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }body {
+        font-family: Arial, sans-serif;
+        color: #ffffff;
+        overflow-x: hidden;
+    }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 20px;
-  border: 1px solid white;
-  border-radius: 20px;
-  background-color: black;
-  animation: flicker 1.5s infinite alternate;
-}
+    video.background-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
 
-@keyframes flicker {
-  0% {
-    opacity: 1;
-    text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 20px yellow;
-  }
-  100% {
-    opacity: 0.8;
-    text-shadow: 0 0 10px red, 0 0 20px orange, 0 0 30px yellow;
-  }
-}
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 100;
+    }
 
-.container {
-  padding-top: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+    .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        animation: colorChange 3s infinite alternate;
+    }
 
-.title {
-  font-size: 3em;
-  animation: flicker 2s infinite alternate;
-}
+    @keyframes colorChange {
+        0% { color: #00f; }
+        50% { color: #000; }
+        100% { color: #00f; }
+    }
 
-.projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 50px;
-  max-width: 900px;
-}
+    .navbar .nav-link {
+        font-size: 18px;
+        color: #fff;
+        animation: pulse 2s infinite;
+    }
 
-.project {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  width: 250px;
-  color: white;
-  transition: 0.3s;
-}
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
 
-.project:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  transform: scale(1.05);
-}
+    .main {
+        text-align: center;
+        margin-top: 100px;
+    }
 
-.social-icons {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
+    .main h1 {
+        font-size: 36px;
+        text-shadow: 0 0 5px #ff0, 0 0 10px #f00;
+    }
 
-.social-icons img {
-  width: 40px;
-  height: 40px;
-  transition: transform 0.3s;
-}
+    .projects, .social {
+        display: flex;
+        justify-content: space-around;
+        margin: 50px 20px;
+    }
 
-.social-icons img:hover {
-  transform: scale(1.2);
-}
+    .project, .social a {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        width: 150px;
+        transition: transform 0.3s;
+    }
 
-  </style>
+    .project:hover, .social a:hover {
+        transform: scale(1.05);
+    }
+
+    .project img, .social img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .project a, .social a {
+        color: #fff;
+        text-decoration: none;
+    }
+</style>
+
 </head><body>
-  <div class="navbar">
-    <a href="#">Hire Me</a>
-  </div>  <div class="container">
-    <div class="title">Hi, it's Symon</div><div class="projects">
-  <div class="project">
-    <h3>HTML Project</h3>
-    <p>A rare and clean HTML layout with animations.</p>
-  </div>
-  <div class="project">
-    <h3>CSS Project</h3>
-    <p>Beautiful and stylish CSS effects example.</p>
-  </div>
-  <div class="project">
-    <h3>JavaScript Game</h3>
-    <p>A fun and simple game to practice JS logic.</p>
-  </div>
-  <div class="project">
-    <h3>Python Mini App</h3>
-    <p>A handy mini app written in Python.</p>
-  </div>
-  <div class="project">
-    <h3>React Portfolio</h3>
-    <p>Built with React for interactive UI and fast experience.</p>
-  </div>
-  <div class="project">
-    <h3>PHP Login System</h3>
-    <p>Simple and secure login system using PHP.</p>
-  </div>
+    <video autoplay loop muted class="background-video">
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video><div class="navbar">
+    <div class="logo">Symon</div>
+    <div class="nav-link">Hire Me</div>
 </div>
 
-<div class="social-icons">
-  <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
-    <img src="facebook.png" alt="Facebook" />
-  </a>
-  <a href="https://www.instagram.com/symonster__/" target="_blank">
-    <img src="instagram.png" alt="Instagram" />
-  </a>
-  <a href="https://wa.me/96597707393" target="_blank">
-    <img src="whatsapp.png" alt="WhatsApp" />
-  </a>
+<div class="main">
+    <h1>Hi, it's Symon</h1>
+
+    <div class="projects">
+        <div class="project">
+            <img src="html.png" alt="HTML">
+            <a href="html-project/index.html">HTML Project</a>
+        </div>
+        <div class="project">
+            <img src="css.png" alt="CSS">
+            <a href="css-project/index.html">CSS Project</a>
+        </div>
+        <div class="project">
+            <img src="javascript.png" alt="JS">
+            <a href="js-project/index.html">JS Game</a>
+        </div>
+    </div>
+
+    <div class="projects">
+        <div class="project">
+            <img src="python.png" alt="Python">
+            <a href="python-app/index.html">Python App</a>
+        </div>
+        <div class="project">
+            <img src="react.png" alt="React">
+            <a href="react-portfolio/index.html">React Portfolio</a>
+        </div>
+        <div class="project">
+            <img src="php.png" alt="PHP">
+            <a href="php-login/index.html">PHP Login</a>
+        </div>
+    </div>
+
+    <div class="social">
+        <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
+            <img src="facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/symonster__/" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/96597707393" target="_blank">
+            <img src="whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
 </div>
 
-  </div>
 </body></html>
