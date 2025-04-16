@@ -1,158 +1,137 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symon's Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }body {
-        font-family: Arial, sans-serif;
-        color: #ffffff;
-        overflow-x: hidden;
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Symon's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-
-    video.background-video {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-        z-index: -1;
-        object-fit: cover;
+    body, html {
+      height: 100%;
+      overflow: hidden;
     }
-
-    .navbar {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        position: fixed;
-        top: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 100;
+    .background-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
     }
-
-    .navbar .logo {
-        font-size: 24px;
-        font-weight: bold;
-        animation: colorChange 3s infinite alternate;
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
     }
-
-    @keyframes colorChange {
-        0% { color: #00f; }
-        50% { color: #000; }
-        100% { color: #00f; }
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      background: linear-gradient(to right, black, blue);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: flicker 2s infinite;
     }
-
-    .navbar .nav-link {
-        font-size: 18px;
-        color: #fff;
-        animation: pulse 2s infinite;
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
     }
-
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
-        100% { transform: scale(1); }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      background-color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: transform 0.3s;
     }
-
-    .main {
-        text-align: center;
-        margin-top: 100px;
+    nav a:hover {
+      transform: scale(1.1);
     }
-
-    .main h1 {
-        font-size: 36px;
-        text-shadow: 0 0 5px #ff0, 0 0 10px #f00;
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
     }
-
+    .content h1 {
+      font-size: 48px;
+      animation: fireEffect 3s infinite;
+    }
+    @keyframes fireEffect {
+      0%, 100% { text-shadow: 0 0 5px red, 0 0 10px orange, 0 0 20px yellow; }
+      50% { text-shadow: 0 0 10px yellow, 0 0 20px red, 0 0 30px orange; }
+    }
     .projects, .social {
-        display: flex;
-        justify-content: space-around;
-        margin: 50px 20px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
-
-    .project, .social a {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        width: 150px;
-        transition: transform 0.3s;
+    .projects {
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
     }
-
-    .project:hover, .social a:hover {
-        transform: scale(1.05);
+    .social {
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
     }
-
-    .project img, .social img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 10px;
+    .projects a, .social a {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 8px;
+      transition: background 0.3s;
     }
-
-    .project a, .social a {
-        color: #fff;
-        text-decoration: none;
+    .projects a:hover, .social a:hover {
+      background-color: rgba(255,255,255,0.2);
     }
-</style>
-
-</head><body>
-    <video autoplay loop muted class="background-video">
-        <source src="your-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video><div class="navbar">
+    .projects img, .social img {
+      height: 30px;
+      width: 30px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay muted loop class="background-video">
+    <source src="your-video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>  <header>
     <div class="logo">Symon</div>
-    <div class="nav-link">Hire Me</div>
-</div>
-
-<div class="main">
+    <nav>
+      <a href="#">Hire Me</a>
+    </nav>
+  </header>  <div class="content">
     <h1>Hi, it's Symon</h1>
-
-    <div class="projects">
-        <div class="project">
-            <img src="html.png" alt="HTML">
-            <a href="html-project/index.html">HTML Project</a>
-        </div>
-        <div class="project">
-            <img src="css.png" alt="CSS">
-            <a href="css-project/index.html">CSS Project</a>
-        </div>
-        <div class="project">
-            <img src="javascript.png" alt="JS">
-            <a href="js-project/index.html">JS Game</a>
-        </div>
-    </div>
-
-    <div class="projects">
-        <div class="project">
-            <img src="python.png" alt="Python">
-            <a href="python-app/index.html">Python App</a>
-        </div>
-        <div class="project">
-            <img src="react.png" alt="React">
-            <a href="react-portfolio/index.html">React Portfolio</a>
-        </div>
-        <div class="project">
-            <img src="php.png" alt="PHP">
-            <a href="php-login/index.html">PHP Login</a>
-        </div>
-    </div>
-
-    <div class="social">
-        <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
-            <img src="facebook.png" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/symonster__/" target="_blank">
-            <img src="instagram.png" alt="Instagram">
-        </a>
-        <a href="https://wa.me/96597707393" target="_blank">
-            <img src="whatsapp.png" alt="WhatsApp">
-        </a>
-    </div>
-</div>
-
-</body></html>
+  </div>  <div class="projects">
+    <a href="#"><img src="html.png" alt="HTML">HTML Project</a>
+    <a href="#"><img src="css.png" alt="CSS">CSS Project</a>
+    <a href="#"><img src="javascript.png" alt="JS">JavaScript Game</a>
+    <a href="#"><img src="python.png" alt="Python">Python Mini App</a>
+    <a href="#"><img src="react.png" alt="React">React Portfolio</a>
+    <a href="#"><img src="php.png" alt="PHP">PHP Login System</a>
+  </div>  <div class="social">
+    <a href="https://www.facebook.com/shakawat.hussain.944"><img src="facebook.png" alt="FB">Facebook</a>
+    <a href="https://www.instagram.com/symonster__/"><img src="instagram.png" alt="IG">Instagram</a>
+    <a href="https://wa.me/96597707393"><img src="whatsapp.png" alt="WA">WhatsApp</a>
+  </div>
+</body>
+</html>
