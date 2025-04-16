@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Symon Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('your-image.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: black;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+    }
+
+    .nav-link {
+      font-size: 18px;
+      color: black;
+      animation: bounce 2s infinite;
+      text-decoration: none;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-10px);}
+      60% {transform: translateY(-5px);}
+    }
+
+    .content {
+      padding-top: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Symon</div>
+    <a href="#contact" class="nav-link">Hire Me</a>
+  </header>
+
+  <div class="content">
+    <h1>Hi, it's Symon</h1>
+    <p>Welcome to my interactive portfolio!</p>
+    <!-- Add project sections and icons here as needed -->
+  </div>
+</body>
+</html>
