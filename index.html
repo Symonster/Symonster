@@ -111,17 +111,35 @@
       gap: 50px;
     }
 
-    .image img {
-      max-width:220px;
-      border-radius: 50%;
-      box-shadow: 0 0 25px #00ff84;
-      margin-top: 1000px;
-      margin-left: 0;
-      .image {
-  margin-top: 50px;
+    .image {
+  position: relative;
+  width: 300px;
+  height: 300px;
 }
-    }
 
+.image img {
+  position: absolute;
+  top: 50px;  /* নিচে আনতে চাইলে এখানেই adjust করো */
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00ff84;
+  object-fit: cover;
+  z-index: 2;
+}
+.main-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 100px; /* image এর overlay যেন text না ঢেকে দেয় */
+}
+<div class="image">
+  <img src="Zoro.jpg" alt="Zoro" />
+</div>
     .content h1 {
       font-size: 2rem;
     }
