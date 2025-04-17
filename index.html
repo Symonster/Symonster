@@ -110,29 +110,24 @@
       justify-content: center;
       gap: 50px;
     }
-    
-.image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 20px #00ff84;
-  z-index: 2;
-}
-.main-container {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  padding-top: 100px; /* image এর overlay যেন text না ঢেকে দেয় */
-}
-<div class="image">
-</div>
+
+    .image {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    .image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00ff84;
+    }
+
     .content h1 {
       font-size: 2rem;
     }
@@ -187,21 +182,10 @@
         display: block;
       }
     }
-    #tsparticles {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  top: 0;
-  left: 0;
-}
   </style>
 </head>
 <body>
   <nav>
-    <div class="image">
-  <img src="Zoro.jpg" alt="Profile" />
-</div>
     <div class="logo">Shakawat <span>Hussain</span></div>
     <div class="links">
       <a href="#">Home</a>
@@ -227,12 +211,12 @@
   <section>
     <div class="main-container">
       <div class="image">
-        <img src="Zoro.jpg" alt="Zoro" />
+        <img src="zoro.jpg" alt="Zoro" />
       </div>
       <div class="content">
         <h1>Hey I'm <span>Symon</span></h1>
         <div class="typewriter">I'm a <span class="typewriter-text"></span><label>|</label></div>
-        <p>I am a software developer.I can also design your websites. </p>
+        <p>I am a software developer. I can also design your websites.</p>
         <div class="social-links">
           <a href="#"><i class="fab fa-github"></i></a>
           <a href="#"><i class="fab fa-facebook"></i></a>
@@ -287,66 +271,5 @@
 
     window.onload = typeWriter;
   </script>
-</body><div id="tsparticles"></div>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
-<script>
-  tsParticles.load("tsparticles", {
-    background: {
-      color: {
-        value: "#000000"
-      }
-    },
-    particles: {
-      number: {
-        value: 60,
-      },
-      color: {
-        value: "#00ff84"
-      },
-      shape: {
-        type: "circle"
-      },
-      opacity: {
-        value: 0.5,
-        random: true
-      },
-      size: {
-        value: 4,
-        random: true
-      },
-      move: {
-        direction: "bottom",
-        speed: 1,
-        outModes: "out"
-      },
-      links: {
-        enable: true,
-        distance: 150,
-        color: "#00ff84",
-        opacity: 0.4,
-        width: 1
-      }
-    },
-    interactivity: {
-      events: {
-        onHover: {
-          enable: true,
-          mode: "repulse"
-        },
-        onClick: {
-          enable: true,
-          mode: "push"
-        }
-      },
-      modes: {
-        repulse: {
-          distance: 100
-        },
-        push: {
-          quantity: 4
-        }
-      }
-    }
-  });
-</script>
+</body>
 </html>
