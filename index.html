@@ -1,176 +1,176 @@
-<!-- Feel free to paste this in your index.html -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Symon's Portfolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symon - Photographer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #000;
+        color: #fff;
+        line-height: 1.6;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      color: white;
-      overflow-x: hidden;
-      position: relative;
+    a {
+        text-decoration: none;
+        color: #00ff88;
     }
 
-    video.bg-video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: -1;
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px 0;
     }
 
     header {
-      width: 100%;
-      padding: 20px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
     }
 
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #00aaff;
+    header nav a {
+        margin-left: 20px;
     }
 
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 18px;
-      animation: pulse 2s infinite;
+    .hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+    .hero-text h1 {
+        font-size: 40px;
+        color: #fff;
     }
 
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 40px 30px;
+    .hero-text p {
+        max-width: 500px;
     }
 
-    .project {
-      width: 30%;
-      margin-bottom: 30px;
-      text-align: center;
-      background-color: rgba(255,255,255,0.1);
-      padding: 20px;
-      border-radius: 10px;
-      transition: transform 0.3s;
+    .hero img {
+        max-width: 300px;
+        border-radius: 15px;
     }
 
-    .project:hover {
-      transform: scale(1.05);
+    .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: #00ff88;
+        color: #000;
+        border-radius: 5px;
     }
 
-    .project img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 10px;
+    .about {
+        display: flex;
+        align-items: center;
+        padding: 60px 0;
     }
 
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      padding: 20px;
+    .about-img {
+        flex: 1;
+        text-align: center;
     }
 
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
+    .about-img img {
+        max-width: 250px;
+        border: 5px solid #00ff88;
     }
 
-    .social-icons img {
-      width: 40px;
-      height: 40px;
-      margin: 0 15px;
-      transition: transform 0.3s;
+    .about-text {
+        flex: 2;
+        padding-left: 30px;
     }
 
-    .social-icons img:hover {
-      transform: scale(1.2);
+    .about-text h2 {
+        color: #00ff88;
     }
 
-    .footer-note {
-      text-align: center;
-      font-size: 18px;
-      color: white;
-      margin-top: 30px;
+    .services {
+        padding: 60px 0;
+        text-align: center;
     }
-  </style>
-</head>
-<body>
 
-  <video class="bg-video" autoplay loop muted>
-    <source src="your-video.mp4.mp4" type="video/mp4" />
-  </video>
+    .services h2 {
+        color: #00ff88;
+        margin-bottom: 40px;
+    }
 
-  <header>
-    <div class="logo">Symon</div>
-    <nav>
-      <a href="#">Hire Me</a>
-    </nav>
-  </header>
+    .service-boxes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
 
-  <section class="projects">
-    <div class="project">
-      <img src="html.png" alt="HTML Project">
-      <h3>HTML Project</h3>
-    </div>
-    <div class="project">
-      <img src="css.png" alt="CSS Project">
-      <h3>CSS Project</h3>
-    </div>
-    <div class="project">
-      <img src="javascript.png" alt="JavaScript Game">
-      <h3>JavaScript Game</h3>
-    </div>
-    <div class="project">
-      <img src="python.png" alt="Python Mini App">
-      <h3>Python Mini App</h3>
-    </div>
-    <div class="project">
-      <img src="react.png" alt="React Portfolio">
-      <h3>React Portfolio</h3>
-    </div>
-    <div class="project">
-      <img src="php.png" alt="PHP Login System">
-      <h3>PHP Login System</h3>
-    </div>
-  </section>
+    .service-box {
+        background: #111;
+        padding: 20px;
+        border-radius: 10px;
+    }
+</style>
 
-  <div class="social-icons">
-    <a href="https://www.facebook.com/shakawat.hussain.944" target="_blank">
-      <img src="facebook.png" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/symonster__/" target="_blank">
-      <img src="instagram.png" alt="Instagram">
-    </a>
-    <a href="https://wa.me/96597707393" target="_blank">
-      <img src="whatsapp.png" alt="WhatsApp">
-    </a>
-  </div>
+</head><body>
+    <div class="container">
+        <header>
+            <h1 style="color:#00ff88">Symon</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header><section class="hero">
+        <div class="hero-text">
+            <h1>Hi There,<br>I Am Photographer</h1>
+            <p>I'm a Web Developer with extensive experience for over 5 years. My expertise is to create and design websites, graphics and many more...</p>
+            <a class="btn" href="#">Hire Me</a>
+        </div>
+        <img src="your-photo.jpg" alt="Symon Photo">
+    </section>
 
-  <div class="footer-note">
-    Feel free to contact me for any project
-  </div>
+    <section class="about">
+        <div class="about-img">
+            <img src="your-photo.jpg" alt="Symon">
+        </div>
+        <div class="about-text">
+            <h2>About <span style="color:#00ff88">Me</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus est, finibus ut congue sed, faucibus ut dui.</p>
+            <p><strong>Name:</strong> Symon</p>
+            <p><strong>Age:</strong> 24</p>
+            <p><strong>Address:</strong> Hawally, Kuwait</p>
+            <p><strong>Phone:</strong> +965 97707393</p>
+            <p><strong>Email:</strong> su2403703@gmail.com</p>
+            <p><strong>Freelance:</strong> Available</p>
+            <a class="btn" href="#">Download CV</a>
+        </div>
+    </section>
 
-</body>
-</html>
+    <section class="services">
+        <h2>My <span style="color:#00ff88">Services</span></h2>
+        <div class="service-boxes">
+            <div class="service-box">
+                <h3>Web Design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-box">
+                <h3>Development</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-box">
+                <h3>Graphic Design</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body></html>
