@@ -1,258 +1,125 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symon Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #000;
-        color: #fff;
-        line-height: 1.6;
-        overflow-x: hidden;
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Symon - Photographer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-
-    a {
-        text-decoration: none;
-        color: #00ff88;
+    body {
+      background: #000;
+      color: white;
     }
-
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-        padding: 20px 0;
-        position: relative;
-        z-index: 2;
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
     }
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-        z-index: 2;
-        position: relative;
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
     }
-
-    header nav a {
-        margin-left: 20px;
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 100px;
     }
-
-    .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 40px 0;
-        position: relative;
+    .content h1 {
+      font-size: 3rem;
     }
-
-    .hero-text h1 {
-        font-size: 40px;
-        color: #fff;
+    .content span {
+      color: #00ff84;
     }
-
-    .hero-text p {
-        max-width: 500px;
-    }
-
-    .hero img {
-        max-width: 300px;
-        border-radius: 15px;
-    }
-
     .btn {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #00ff88;
-        color: #000;
-        border-radius: 5px;
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #00ff84;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
     }
-
-    .about {
-        display: flex;
-        align-items: center;
-        padding: 60px 0;
+    .hero-img {
+      position: absolute;
+      right: 50px;
+      bottom: 0;
+      height: 500px;
+      z-index: 1;
     }
-
-    .about-img {
-        flex: 1;
-        text-align: center;
-    }
-
-    .about-img img {
-        max-width: 250px;
-        border: 5px solid #00ff88;
-    }
-
-    .about-text {
-        flex: 2;
-        padding-left: 30px;
-    }
-
-    .about-text h2 {
-        color: #00ff88;
-    }
-
-    .services {
-        padding: 60px 0;
-        text-align: center;
-    }
-
-    .services h2 {
-        color: #00ff88;
-        margin-bottom: 40px;
-    }
-
-    .service-boxes {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
-
-    .service-box {
-        background: #111;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    /* Background animation */
-    #background-animation {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: #000;
-        z-index: 0;
-    }
-
-    canvas {
-        display: block;
-    }
-</style>
-
-</head><body>
-    <div id="background-animation"></div>
-    <div class="container">
-        <header>
-            <h1 style="color:#00ff88">Symon</h1>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Blog</a>
-                <a href="#">Contact</a>
-            </nav>
-        </header><section class="hero">
-        <div class="hero-text">
-            <h1>Hi There,<br>I am a web developer</h1>
-            <p>I'm a Web Developer with some basic experience. My expertise is to create and design websites, graphics and many more...</p>
-            <a class="btn" href="#">Hire Me</a>
-        </div>
-        <img src="eren.png.jpeg" alt="Symon Photo">
-    </section>
-
-    <section class="about">
-        <div class="about-img">
-            <img src="your-photo.png" alt="Symon">
-        </div>
-        <div class="about-text">
-            <h2>About <span style="color:#00ff88">Me</span></h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tellus est, finibus ut congue sed, faucibus ut dui.</p>
-            <p><strong>Name:</strong> Symon</p>
-            <p><strong>Age:</strong> 24</p>
-            <p><strong>Address:</strong> Hawally, Kuwait</p>
-            <p><strong>Phone:</strong> +965 97707393</p>
-            <p><strong>Email:</strong> su2403703@gmail.com</p>
-            <p><strong>Freelance:</strong> Available</p>
-            <a class="btn" href="#">Download CV</a>
-        </div>
-    </section>
-
-    <section class="services">
-        <h2>My <span style="color:#00ff88">Services</span></h2>
-        <div class="service-boxes">
-            <div class="service-box">
-                <h3>Web Design</h3>
-                <p>i can do some simple web designs.</p>
-            </div>
-            <div class="service-box">
-                <h3>Development</h3>
-                <p>some decent web development.</p>
-            </div>
-            <div class="service-box">
-                <h3>Graphic Design</h3>
-                <p>at this sector you can count on me.</p>
-            </div>
-        </div>
-    </section>
+  </style>
+</head>
+<body>
+  <div class="hero-section">
+    <div id="particles-js"></div><div class="content">
+  <h1>Hi There, <br> I Am <span>Photographer</span></h1>
+  <p>I’m Symon, a Web Developer with extensive experience...</p>
+  <a href="#about" class="btn">Hire Me</a>
 </div>
 
-<!-- particles.js library -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>
-    particlesJS("background-animation", {
-        "particles": {
-            "number": {
-                "value": 80,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": { "value": "#ffffff" },
-            "shape": {
-                "type": "circle",
-                "stroke": { "width": 0, "color": "#000000" },
-                "polygon": { "nb_sides": 5 }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": { "enable": false }
-            },
-            "size": {
-                "value": 3,
-                "random": true
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 3,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": { "enable": true, "mode": "repulse" },
-                "onclick": { "enable": true, "mode": "push" },
-                "resize": true
-            },
-            "modes": {
-                "repulse": { "distance": 100 },
-                "push": { "particles_nb": 4 }
-            }
-        },
-        "retina_detect": true
-    });
-</script>
+<img src="your-photo.png" class="hero-img" alt="Symon" />
 
-</body></html>
+  </div>  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: false, rotateX: 600, rotateY: 1200 },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true,
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 },
+        },
+      },
+      retina_detect: true,
+    });
+  </script></body>
+</html>
