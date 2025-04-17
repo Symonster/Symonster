@@ -1,63 +1,264 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css">
-    <title>Olivia Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Olivia Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+    }
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #00ff84;
+      text-shadow: 0 0 10px #00ff84;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    .links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #00ff84;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+
+    .links a:hover::after {
+      width: 100%;
+    }
+
+    .hamburg {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: -500px;
+      left: 0;
+      width: 100%;
+      background: #111;
+      transition: 0.5s ease;
+    }
+
+    .dropdown .links {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .cancel {
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .image img {
+      max-width: 300px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #00ff84;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+    }
+
+    .content span {
+      color: #00ff84;
+    }
+
+    .typewriter {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .typewriter label {
+      animation: blink 0.8s infinite;
+      color: #00ff84;
+    }
+
+    @keyframes blink {
+      0%, 100% {opacity: 1;}
+      50% {opacity: 0;}
+    }
+
+    .social-links a {
+      margin: 10px 10px 0 0;
+      color: white;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #00ff84;
+    }
+
+    .btn button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      background: #00ff84;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .links {
+        display: none;
+      }
+
+      .hamburg {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                Olivia <span>Kate</span>
-            </div>
-            <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#">About</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Services</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
-        </div>
-        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+  <nav>
+    <div class="logo">Olivia <span>Kate</span></div>
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
     </div>
-        <div class="dropdown">
-            <div class="links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Skills</a>
-                <a href="#">Service</a>
-                <a href="#">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-            </div>
+    <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+  </nav>
+
+  <div class="dropdown">
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Skills</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+    </div>
+  </div>
+
+  <section>
+    <div class="main-container">
+      <div class="image">
+        <img src="https://i.ibb.co/8rRMcYk/profile.png" alt="Profile" />
+      </div>
+      <div class="content">
+        <h1>Hey I'm <span>Olivia</span></h1>
+        <div class="typewriter">I'm a <span class="typewriter-text"></span><label>|</label></div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi expedita rerum quos mollitia.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-    </nav>
-    <section>
-        <div class="main-container">
-            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
-                <img src="main.png" alt="">
-            </div>
-            <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Olivia</span></h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit quasi commodi quia rerum, iste corporis expedita in excepturi nesciunt repellendus quisquam amet provident ad mollitia debitis odit voluptatem necessitatibus tempora.</p>
-                <div class="social-links">
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
-                </div>
-                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
-                    <button>Hire me</button>
-                </div>
-            </div>
+        <div class="btn">
+          <button>Hire me</button>
         </div>
-    </section>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset:0});
-    </script>
-    <script src="script.js"></script>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ offset: 0 });
+
+    function hamburg(){
+      document.querySelector(".dropdown").style.transform = "translateY(0px)";
+    }
+
+    function cancel(){
+      document.querySelector(".dropdown").style.transform = "translateY(-500px)";
+    }
+
+    const texts = ["DEVELOPER", "DESIGNER", "YOUTUBER"];
+    let speed = 100;
+    const textElements = document.querySelector(".typewriter-text");
+    let textIndex = 0;
+    let charcterIndex = 0;
+
+    function typeWriter(){
+      if (charcterIndex < texts[textIndex].length){
+        textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
+        charcterIndex++;
+        setTimeout(typeWriter, speed);
+      } else {
+        setTimeout(eraseText, 1000);
+      }
+    }
+
+    function eraseText(){
+      if(textElements.innerHTML.length > 0){
+        textElements.innerHTML = textElements.innerHTML.slice(0,-1);
+        setTimeout(eraseText, 50);
+      } else {
+        textIndex = (textIndex + 1) % texts.length;
+        charcterIndex = 0;
+        setTimeout(typeWriter, 500);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
 </body>
 </html>
