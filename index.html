@@ -117,15 +117,24 @@
   height: 300px;
 }
 
+.image {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .image img {
   position: absolute;
-  top: 50px;  /* নিচে আনতে চাইলে এখানেই adjust করো */
+  top: 0;
   left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 50%;
-  box-shadow: 0 0 15px #00ff84;
   object-fit: cover;
+  box-shadow: 0 0 20px #00ff84;
   z-index: 2;
 }
 .main-container {
